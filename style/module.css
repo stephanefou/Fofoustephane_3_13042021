@@ -1,0 +1,36 @@
+body {
+    width: 356px;  
+  }
+
+.operation {
+    display: flex;
+    justify-content: center;
+}
+
+.operation article {
+    display: flex;
+    width: 85.96%;
+    height: 69px;
+    background-color: #F6F6F6;
+    align-items: center;
+    box-shadow: 2px 2px 10px #e7e7e7;
+    border-radius: 30px;
+  }
+  
+  .number {
+    background-color: #9356DC ;
+    border-radius: 20px;
+    padding: 5px 10px;
+    position: relative;
+    left: -10px;
+  }
+  
+  .fa-mobile-alt {
+    padding-left: 8px;
+  }
+  
+  .operation__description {
+    margin-left: 30px;
+    margin-right: auto;
+  }
+  
