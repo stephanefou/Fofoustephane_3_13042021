@@ -1,0 +1,32 @@
+.card-menu {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f6f6f6;
+
+}
+
+.card-menu article {
+    display:flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 92.98%;
+    height: 65px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 10px #e7e7e7;
+}
+
+.card-menu__recipe {
+    margin: 0;
+    padding: 12px 9px;
+}
+
+.card-menu__recipe h2{
+    margin: 0;
+}
+
+.card-menu__price {
+    padding: 0 20px 12px 0;
+}

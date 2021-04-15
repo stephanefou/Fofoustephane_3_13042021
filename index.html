@@ -16,10 +16,9 @@
 <header class="header">
     <div class="logo-container">
         <a href="index.html" title="aller à la page d'accueil"><img class="header-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
-    </div>...
+    </div>
 </header>
-    <!-- Le reste du contenu -->
-    ...
+    
 <!----------------------------------------------------------*\
     BTN
 \*----------------------------------------------------------->
@@ -43,26 +42,66 @@
     </div>
 
 <!----------------------------------------------------------*\
-    CARD
+    RESTAURANT-CARD
 \*----------------------------------------------------------->
-    <div class="restaurant__card">
-        <span class="restaurant__card--newest">Nouveau</span>
+    <div class="restaurant-card">
+        <span class="restaurant-card--newest">Nouveau</span>
         <article>
             <a href="#" title="Aller sur la page du restaurant 'à la française'">
                 <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
                 <div class="restaurant-card__heading">
-                    <h3>À la française</h3> 
-                    <p>Cité rouge</p>
-                    <span class="restaurant-card-opinion">
-                        <i class="far fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </span>
+                    <div class="restaurant-card__heading__title">
+                        <h3>À la française</h3> 
+                        <p>Cité rouge</p>
+                    </div>
+                    <div class="restaurant-card__heading__opinion">
+                        <span class="restaurant-card__heading__opinion__icon">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <span class="restaurant-card__heading__opinion__icon">
+                            <i class="far fa-heart"></i>                        
+                        </span>
+                    </div>
+                    
                 </div>
             </a>
         </article>
     </div>
+
     <!----------------------------------------------------------*\
-        CARD 
+        RESTAURANT-PAGE
     \*----------------------------------------------------------->
+    <div class="restaurant-page">
+        <article>
+            <img class="restaurant-page__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
+            <div class="restaurant-page__heading">
+                <div class="restaurant-page__heading__title">
+                    <h1>À la française</h1> 
+                </div>
+                <div class="restaurant-page__heading__opinion">
+                    <span class="restaurant-page__heading__opinion__icon">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="restaurant-page__heading__opinion__icon">
+                        <i class="far fa-heart"></i>                        
+                    </span>
+                </div>                    
+            </div>
+        </article>
+    </div>
+
+    <!----------------------------------------------------------*\
+        CARD-MENU
+    \*----------------------------------------------------------->
+    <div class="card-menu">
+        <h1>ENTRÉES</h1> 
+        <article>
+            <div class="card-menu__recipe">
+                <h2>Tartare de poulpe acidulé</h2>
+                <p>Choisissez un restaurant</p>
+            </div>
+            <span class="card-menu__price"><strong>25€</strong></span>
+        </article>
+    </div>
 </body>
 </html>

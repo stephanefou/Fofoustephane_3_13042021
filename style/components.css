@@ -4,9 +4,9 @@
 }
 
 .btn-explore__text-invite{
-    display: inline-block; /*sans ça la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
+    display: inline-block; /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
     color: #fff;
-    background: linear-gradient(#FF79DA, #9356DC); /*ne marche pas avec backdround-color*/
+    background: linear-gradient(#FF79DA, #9356DC); /*ne marche pas avec background-color*/
     border-radius: 30px;
     padding: 16px 21px;
 }

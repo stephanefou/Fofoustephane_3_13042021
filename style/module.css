@@ -18,6 +18,7 @@ body {
   }
   
   .number {
+    color: #fff;
     background-color: #9356DC ;
     border-radius: 20px;
     padding: 5px 10px;
