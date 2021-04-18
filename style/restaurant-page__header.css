@@ -1,17 +1,18 @@
-.restaurant-page article {
-    position: relative; /*si tyu l'enlèves c'est dramatique*/
+.restaurant-page {
+    position: relative; /*si tu l'enlèves c'est dramatique*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 288px;
 }
 
-.restaurant-page article img {/*en mettant juste article tu decontiens img de l'article à la française, pas assez spécifique*/
+.restaurant-page img {/*en mettant juste article tu decontiens img de l'article à la française, pas assez spécifique*/
     position: absolute; /*c'est bon mais tu ne comprends pas pourquoi c'est nécessaire par rapport au z-index*/
     left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     /*clip-path: inset(0% 7% 15% 10%);*/
 }
 
@@ -21,16 +22,22 @@
     align-items: baseline;
     background-color: #F6F6F6;
     border-radius: 30px 30px 0 0;
-    padding: 20px 0 10px 0;
+    padding: 20px 18px 10px 18px;
     z-index: 1;
+    position: relative;
+    bottom: -1px; /*juste pour cacher le défaut de séparation de deux div, si tu l'enlèves tu verras*/
 }
 
 .restaurant-page__heading h1 {
     margin: 0px;
+    font-size: 28px;
+    font-family: shrikhand;
+    font-style: oblique 40deg;
 }
 
 .restaurant-page__heading__opinion {
     margin-left: auto;
+    margin-right: 17px;
 }
 
 .restaurant-page__heading__opinion__icon{
@@ -42,6 +49,7 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text; /*background clip permet de rogner le background ici il ne couvre que le texte à savoir l'icon*/
     -webkit-text-fill-color: transparent;
+    font-size: 22px;
 }
 
 /*.restaurant-page__heading__opinion__icon .fas:active{
@@ -50,7 +58,8 @@
 
 .restaurant-page__heading__opinion__icon .far{/*est au dessus car déclaré en dernier dans html*/
     position: relative;
-    top: -16.5px;
+    top: -21.5px;
+    font-size: 22px;
     /*background-color: #fff;*/
 }
 

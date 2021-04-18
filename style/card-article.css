@@ -3,29 +3,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f6f6f6;
+  padding: 54px 0 60px 0;
 }
 
-
-.restaurant-card--newest {
-  display: inline-block;
-  color: #34a689;
-  padding: 6px 12px;
-  background-color: #99E2D0;
-  border-radius: 3px;
-  margin-left: auto;
-  position: relative;
-  left: -35px;
-  bottom: -40px;
+.restaurant-card h2 {
+  align-self: flex-start;
+  font-size: 20px;
+  padding-left: 22px;
+  margin: 0 0 23px 0;
 }
-
 
 .restaurant-card article {
+  position: relative; /* Pour que "--newest" ne "sorte" pas de son article parent et qu'il ne soit pas mal positionné avec le transform scale au moment du :hover */
   width: 85.96%;
   height: 239px;
   border-radius: 20px;
   background-color: white;
   overflow: hidden;
   box-shadow: 2px 2px 10px #e7e7e7;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.restaurant-card article:hover, .restaurant-card article:focus-within {
+  box-shadow: 0px 0px 7px 1px #D2D2D2;
+  background-color: #F2F2F2;
+  transform: scale(1.05);
+}
+
+.restaurant-card article:focus-within {
+  outline: dotted black 1px;
+  border-radius: 10% 10%;
 }
 
 .restaurant-card article a {
@@ -38,30 +46,71 @@
   height: 166px;
   object-fit: cover;
 }
+
+.restaurant-card--newest {
+  display: inline-block;
+  position: absolute; /*Pour venir se superposer aux autres éléments*/
+  /*left: 67.5%; /*incompréhension à changer en responsive */
+  /*bottom: 82%; /*incompréhension */
+  /*margin-left: 76%;*/
+  top: 0;/*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  left: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  right: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  bottom: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  width: 52px; /*largeur de l'élément donc penser au padding pour une taille totale 76/27, avec 76 ici on est à une taille de 100 dans le devtool et surtout ne pas se tromper sur la taille du texte font-size ici il faut 13px ;*/
+  height: 15px; /*hauteur de l'élément donc penser au padding pour une taille totale 76/27, avec 76 ici on est à une taille de 100 dans le devtool et surtout ne pas se tromper sur la taille du texte font-size ici il faut 13px ;*/
+  margin-left: auto;
+  margin-top: 12px;
+  margin-right: 12px;
+  font-size: 13px;
+  color: #34a689;
+  padding: 6px 12px;
+  background-color: #99E2D0;
+  border-radius: 3px;
+}
 .restaurant-card__heading {
   display: flex;
+  padding: 10px 13px 9px 13px;
 }
 
 .restaurant-card__heading h3,p {/*.restaurant-card__heading h3,p*/
-  margin: 0px;
+  margin: 0 0 5px 0;
 }
 
 .restaurant-card__heading__opinion {
   margin-left: auto;
+  align-self: center;
+  padding-right: 10px;
+
 }
 
-.restaurant-card__heading__opinion__icon{
+.restaurant-card__heading__opinion__icon{/*est ce que tu ne pourrais pas fusionner avec ci-dessus?*/
   display: flex;
   /*cursor: default; tu as besoin de désactiver le lien inherit du parent pour cet élément
   pointer-events: none;*/
 }
 
-.restaurant-card__heading__opinion__icon .fas{
+.restaurant-card__heading__opinion__icon .fas::before {
+  opacity: 0;
+  font-size: 22px;
+}
+
+.restaurant-card__heading__opinion__icon .fas:hover {
   /*opacity: 0;*/
+  opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+  font-size: 22px;
 }
+
+/*.restaurant-card__heading__opinion__icon .fas {
+  /*opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-size: 22px;
+}*/
 
 /*.restaurant-card__heading__opinion__icon .fas:active{
   opacity: 1;
@@ -69,8 +118,9 @@
 
 .restaurant-card__heading__opinion__icon .far{/*est au dessus car déclaré en dernier dans html*/
   position: relative;
-  top: -16.5px;
+  top: -21.5px;
   /*background-color: #fff;*/
+  font-size: 22px;
 }
 
 .restaurant-card__heading__opinion__icon .far:active{

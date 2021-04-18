@@ -1,10 +1,16 @@
-body {
-    width: 356px;  
-  }
-
 .operation {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 47px 0 60px 0;
+}
+
+.operation h2 {
+    align-self: flex-start;
+    font-size: 20px;
+    padding-left: 22px;
+    margin: 0 0 23px 0;
 }
 
 .operation article {
@@ -17,21 +23,21 @@ body {
     border-radius: 30px;
   }
   
-  .number {
+.number {
     color: #fff;
     background-color: #9356DC ;
     border-radius: 20px;
     padding: 5px 10px;
     position: relative;
     left: -10px;
-  }
-  
-  .fa-mobile-alt {
+}
+
+.fa-mobile-alt {
     padding-left: 8px;
-  }
-  
-  .operation__description {
+}
+
+.operation__description {
     margin-left: 30px;
     margin-right: auto;
-  }
+}
   

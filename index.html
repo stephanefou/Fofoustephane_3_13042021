@@ -18,25 +18,48 @@
         <a href="index.html" title="aller à la page d'accueil"><img class="header-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
     </div>
 </header>
-    
+
+
 <!----------------------------------------------------------*\
-    BTN
+    SEARCH ZONE
 \*----------------------------------------------------------->
+    <div class="localisation-display">
+        <i class="fas fa-map-marker-alt"></i>
+        <input class="localisation-display__search-input" type="search" placeholder="Paris, Belleville">
+    </div>
+
+<!----------------------------------------------------------*\
+    COMPANY-INTRODUCTION
+\*----------------------------------------------------------->
+<div class="introduction">
+    <h1>Réservez le menu qui vous convient</h1>
+    <p>Découvrez des restaurants d'exception, sélectionnés par  nos soins.</p>
     <div class="btn-explore">
         <a href="index.html" title="aller à la page d'accueil">
             <span class="btn-explore__text-invite">Explorer nos restaurants</span>
         </a>
     </div>
+</div>
+
 <!----------------------------------------------------------*\
-    ARTICLE 1 operation
+    BTN
+\*----------------------------------------------------------->
+<div class="btn-explore">
+    <a href="index.html" title="aller à la page d'accueil">
+        <span class="btn-explore__text-invite">Explorer nos restaurants</span>
+    </a>
+</div>
+
+<!----------------------------------------------------------*\
+    OPERATION
 \*----------------------------------------------------------->
     <div class="operation">
+        <h2>Fonctionnement</h2>
         <article>
             <span class="number">1</span>
             <i class="operation__icon fas fa-mobile-alt"></i>
             <div class="operation__description">
                 <p>Choisissez un restaurant</p>
-                
             </div>
         </article>
     </div>
@@ -45,9 +68,11 @@
     RESTAURANT-CARD
 \*----------------------------------------------------------->
     <div class="restaurant-card">
-        <span class="restaurant-card--newest">Nouveau</span>
+        <!--<span class="restaurant-card--newest">Nouveau</span>-->
+        <h2>Restaurants</h2>
         <article>
             <a href="#" title="Aller sur la page du restaurant 'à la française'">
+                <span class="restaurant-card--newest">Nouveau</span>
                 <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
                 <div class="restaurant-card__heading">
                     <div class="restaurant-card__heading__title">
@@ -56,13 +81,12 @@
                     </div>
                     <div class="restaurant-card__heading__opinion">
                         <span class="restaurant-card__heading__opinion__icon">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart hover-icon"></i>
                         </span>
                         <span class="restaurant-card__heading__opinion__icon">
-                            <i class="far fa-heart"></i>                        
+                            <i class="far fa-heart default-icon"></i>                        
                         </span>
                     </div>
-                    
                 </div>
             </a>
         </article>
@@ -72,36 +96,48 @@
         RESTAURANT-PAGE
     \*----------------------------------------------------------->
     <div class="restaurant-page">
-        <article>
-            <img class="restaurant-page__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
-            <div class="restaurant-page__heading">
-                <div class="restaurant-page__heading__title">
-                    <h1>À la française</h1> 
-                </div>
-                <div class="restaurant-page__heading__opinion">
-                    <span class="restaurant-page__heading__opinion__icon">
-                        <i class="fas fa-heart"></i>
-                    </span>
-                    <span class="restaurant-page__heading__opinion__icon">
-                        <i class="far fa-heart"></i>                        
-                    </span>
-                </div>                    
+        <img class="restaurant-page__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
+        <div class="restaurant-page__heading">
+            <h1 class="restaurant-page__heading__title">À la française</h1>
+            <div class="restaurant-page__heading__opinion">
+                <span class="restaurant-page__heading__opinion__icon">
+                    <i class="fas fa-heart"></i>
+                </span>
+                <span class="restaurant-page__heading__opinion__icon">
+                    <i class="far fa-heart"></i>
+                </span>
             </div>
-        </article>
+        </div>
     </div>
 
     <!----------------------------------------------------------*\
         CARD-MENU
     \*----------------------------------------------------------->
     <div class="card-menu">
-        <h1>ENTRÉES</h1> 
+        <h2 class="card-menu__meal-kind">ENTRÉES</h2> 
         <article>
             <div class="card-menu__recipe">
-                <h2>Tartare de poulpe acidulé</h2>
-                <p>Choisissez un restaurant</p>
+                <h3>Tartare de poulpe acidulé</h3>
+                <p class="card-menu__recipe--byline">Aux zests d'orange<span class="card-menu__recipe--price">25€</span></p>
             </div>
-            <span class="card-menu__price"><strong>25€</strong></span>
         </article>
     </div>
+
+    <!----------------------------------------------------------*\
+        FOOTER
+    \*----------------------------------------------------------->
+<footer class="footer">
+    <div class="logo-container--footer">
+        <a href="index.html" title="aller à la page d'accueil"><img class="footer-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
