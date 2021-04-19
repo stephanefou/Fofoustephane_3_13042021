@@ -37,32 +37,47 @@
 
 .restaurant-page__heading__opinion {
     margin-left: auto;
-    margin-right: 17px;
+    align-self: center;
+    padding-right: 5px;
 }
 
 .restaurant-page__heading__opinion__icon{
     display: flex;
 }
 
-.restaurant-page__heading__opinion__icon .fas{
+.restaurant-page__heading__opinion__icon .fas {
+    position: relative; /*pour ensuite definir le z-index supp à icon far qui permettra au hover d'être au dessus mais il faut un font size aussi supp pour l'instant car tu ne sais pas comment faire pour au hover sur icon fas, icon far disparaisse"*/
+    left: 21.5px;
+    opacity: 0;
+    font-size: 22px;
+    z-index: 1;
+  }
+  
+  .restaurant-page__heading__opinion__icon .fas:hover {
     /*opacity: 0;*/
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    -webkit-background-clip: text; /*background clip permet de rogner le background ici il ne couvre que le texte à savoir l'icon*/
-    -webkit-text-fill-color: transparent;
-    font-size: 22px;
-}
-
-/*.restaurant-page__heading__opinion__icon .fas:active{
     opacity: 1;
-}*/
-
-.restaurant-page__heading__opinion__icon .far{/*est au dessus car déclaré en dernier dans html*/
-    position: relative;
-    top: -21.5px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     font-size: 22px;
-    /*background-color: #fff;*/
-}
-
-.restaurant-page__heading__opinion__icon .far:active{
+  }
+  
+  /*.restaurant-page__heading__opinion__icon .fas:active {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    font-size: 22px;
+  }*/
+  
+  .restaurant-page__hover-icon:hover~.restaurant-page__default-icon{ /*le sibling ne s'applique donc que à icon .far, https://jsfiddle.net/ThinkingStiff/dWHzF/*/
     color: transparent;
-}
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  .restaurant-page__heading__opinion__icon .far {/*est au dessus de icon .fas car déclaré en dernier dans html*/
+    position: relative;
+    /*background-color: #fff;*/
+    font-size: 22px;
+  }

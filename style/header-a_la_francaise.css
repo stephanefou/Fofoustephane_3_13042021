@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0 8px 0;
+}
+
+.fa-arrow-left {
+    position: absolute;
+    color: #353535;
+    margin-right: auto;
+    top: 0;/*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+    left: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+    right: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+    bottom: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+    width: 17px;
+    height: 17px;
+    margin-top: 26px;
+    padding-left: 20px;
+}
+
+.logo-container {
+    display: flex inline-block;
+    align-self: center;
+}
+
+.header-logo {
+    width: 154px;
+    height: auto;
+}
+
+body {
+    margin: 0;
+}

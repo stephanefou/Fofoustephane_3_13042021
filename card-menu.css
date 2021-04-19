@@ -17,8 +17,8 @@
     overflow: hidden; /*pour rogner le square*/
 }
 
-.card-menu article:hover>.card-menu__animate {
-    transform: translateX(-56px);
+.card-menu article:hover>.card-menu__animate-square {
+    transform: scaleX(1);
 }
 
 .card-menu article:hover .fa-check-circle {
@@ -55,79 +55,30 @@
     font-size: 16px;
 }
 
-.card-menu__animate__3points {
-    font-size: 16px;
-}
-
 .card-menu__recipe--price {
     font-weight: 900;
-    font-size: 16px;
-    margin: 0 22px;
 }
 
 /*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
 
-.card-menu__animate {
+.card-menu__animate-square {
     /*opacity: 0;*/
     display: flex;
-    justify-content: baseline;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    width: 56px;
     height: 100%;
-    padding-bottom: 14px;
-    /*transform: scaleX(0);
+    transform: scaleX(0);
     transition: transform 400ms ease-in-out;
-    transform-origin: right 50%;*/
+    transform-origin: right 50%;
 }
 
 .fa-check-circle {
-    display: inline-block;
     color: #fff;
-    padding: 0 20px 0 18px;
-    height: 100%;
-    background-color: #99e2d0;
-    /*transform: rotate(-1turn);
+    transform: rotate(-1turn);
     transition: transform 250ms ease-in-out;
-    transition-delay: 150ms;*/
-}
-
-$easing: cubic-bezier (.49,.18,.23,1);
-$width: 33vh;
-$height: 72vh;
-$margin-right: 4vh;
-$wid-marg: $width + $margin-right;
-.card {
-    width: $width;
-    height: $height;
-    overflow: hidden;
-    &:not(:last-child){
-        margin-right: $margin-right;
-    }
-    &--anim {
-        transform: translateX($width-marg);
-        transition: transform 700ms $easing;
-    }
-    &__contents {
-        width: $width;
-        overflow: hidden;
-    &--anim {
-            transform: translateX($wid-marg*-1);
-            transition: transform 700ms $easing;
-        }
-    }
-}
-.btn {
-    &--reveal {
-        &:hover {
-            & + .card {
-                &--anim {
-                    transform: translateX(0);
-                }
-                .card__contents--anim {
-                    transform: translateX(0);
-                }
-            }
-        }
-    }
+    transition-delay: 150ms;
 }

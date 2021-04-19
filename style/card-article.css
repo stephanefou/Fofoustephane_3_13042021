@@ -90,9 +90,12 @@
   pointer-events: none;*/
 }
 
-.restaurant-card__heading__opinion__icon .fas::before {
+.restaurant-card__heading__opinion__icon .fas {
+  position: relative; /*pour ensuite definir le z-index supp à icon far qui permettra au hover d'être au dessus mais il faut un font size aussi supp pour l'instant car tu ne sais pas comment faire pour au hover sur icon fas, icon far disparaisse"*/
+  left: 21.5px;
   opacity: 0;
   font-size: 22px;
+  z-index: 1;
 }
 
 .restaurant-card__heading__opinion__icon .fas:hover {
@@ -104,25 +107,22 @@
   font-size: 22px;
 }
 
-/*.restaurant-card__heading__opinion__icon .fas {
-  /*opacity: 0;
+/*.restaurant-card__heading__opinion__icon .fas:active {
+  opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
   font-size: 22px;
 }*/
 
-/*.restaurant-card__heading__opinion__icon .fas:active{
-  opacity: 1;
-}*/
-
-.restaurant-card__heading__opinion__icon .far{/*est au dessus car déclaré en dernier dans html*/
-  position: relative;
-  top: -21.5px;
-  /*background-color: #fff;*/
-  font-size: 22px;
+.restaurant-card__hover-icon:hover~.restaurant-card__default-icon{ /*le sibling ne s'applique donc que à icon .far, https://jsfiddle.net/ThinkingStiff/dWHzF/*/
+  color: transparent;
+  opacity: 0;
+  z-index: 0;
 }
 
-.restaurant-card__heading__opinion__icon .far:active{
-  color: transparent;
+.restaurant-card__heading__opinion__icon .far {/*est au dessus de icon .fas car déclaré en dernier dans html*/
+  position: relative;
+  /*background-color: #fff;*/
+  font-size: 22px;
 }

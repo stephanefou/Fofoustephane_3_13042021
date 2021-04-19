@@ -19,7 +19,6 @@
     </div>
 </header>
 
-
 <!----------------------------------------------------------*\
     SEARCH ZONE
 \*----------------------------------------------------------->
@@ -68,10 +67,9 @@
     RESTAURANT-CARD
 \*----------------------------------------------------------->
     <div class="restaurant-card">
-        <!--<span class="restaurant-card--newest">Nouveau</span>-->
         <h2>Restaurants</h2>
         <article>
-            <a href="#" title="Aller sur la page du restaurant 'à la française'">
+            <a href="a_la_francaise.html" title="Aller sur la page du restaurant 'à la française'">
                 <span class="restaurant-card--newest">Nouveau</span>
                 <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
                 <div class="restaurant-card__heading">
@@ -81,10 +79,8 @@
                     </div>
                     <div class="restaurant-card__heading__opinion">
                         <span class="restaurant-card__heading__opinion__icon">
-                            <i class="fas fa-heart hover-icon"></i>
-                        </span>
-                        <span class="restaurant-card__heading__opinion__icon">
-                            <i class="far fa-heart default-icon"></i>                        
+                            <i class="fas fa-heart restaurant-card__hover-icon"></i>
+                            <i class="far fa-heart restaurant-card__default-icon"></i>                        
                         </span>
                     </div>
                 </div>
@@ -101,14 +97,28 @@
             <h1 class="restaurant-page__heading__title">À la française</h1>
             <div class="restaurant-page__heading__opinion">
                 <span class="restaurant-page__heading__opinion__icon">
-                    <i class="fas fa-heart"></i>
-                </span>
-                <span class="restaurant-page__heading__opinion__icon">
-                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart restaurant-page__hover-icon"></i>
+                    <i class="far fa-heart restaurant-page__default-icon"></i>                        
                 </span>
             </div>
         </div>
     </div>
+
+    <!----------------------------------------------------------*\
+        CARD-MENU
+    \*----------------------------------------------------------->
+    <!--<div class="card-menu">
+        <h2 class="card-menu__meal-kind">ENTRÉES</h2> 
+        <article>
+            <div class="card-menu__recipe">
+                <h3>Tartare de poulpe acidulé</h3>
+                <p class="card-menu__recipe--byline">Aux zests d'orange<span class="card-menu__recipe--price">25€</span></p>
+            </div>
+            <div class="card-menu__animate-square">
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </article>
+    </div>-->
 
     <!----------------------------------------------------------*\
         CARD-MENU
@@ -118,23 +128,34 @@
         <article>
             <div class="card-menu__recipe">
                 <h3>Tartare de poulpe acidulé</h3>
-                <p class="card-menu__recipe--byline">Aux zests d'orange<span class="card-menu__recipe--price">25€</span></p>
+                <p class="card-menu__recipe--byline">Aux zests d'orange</p>
+            </div>
+            <div class="card-menu__animate">
+                <section class="card-menu__animate__3points">
+                    <span>...</span>
+                </section>
+                <section class="card-menu__recipe--price">
+                    <span>25€</span>
+                </section>
+                <div class="card-menu__animate__green-square">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </div>
         </article>
     </div>
 
-    <!----------------------------------------------------------*\
-        FOOTER
-    \*----------------------------------------------------------->
+<!----------------------------------------------------------*\
+    FOOTER
+\*----------------------------------------------------------->
 <footer class="footer">
     <div class="logo-container--footer">
         <a href="index.html" title="aller à la page d'accueil"><img class="footer-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
     </div>
     <div>
         <ul>
-            <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fas fa-handshake"></i>Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
+            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-handshake"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
             <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </div>
