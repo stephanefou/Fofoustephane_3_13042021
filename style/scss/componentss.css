@@ -54,8 +54,8 @@
   border-radius: 30px;
   padding: 16px 21px;
 }
-.btn:hover, .btn--command:hover {
-  background: lighten linear-gradient(#FF79DA, #9356DC), 10;
+.btn__text:hover, .btn--command__text:hover {
+  background: lighten linear-gradient(#FF79DA, #9356DC), 50%;
 }
 
 .btn--command__text {

@@ -1,32 +1,32 @@
 .recipe-card {
     display:flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #f6f6f6;
+}
+
+.recipe-card section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0 0 10px 0;
 }
 
 .recipe-card article {
     display:flex;
-    align-self: center;
-    align-items: center;
+    justify-content: center;
     width: 92.98%;
     height: 65px;
     border-radius: 15px;
     background-color: white;
     box-shadow: 2px 2px 10px #e7e7e7;
     overflow: hidden; /*pour rogner le square*/
-}
-
-.recipe-card article:hover>.recipe-card__animate {
-    transform: translateX(-56px);
-}
-
-.recipe-card article:hover .fa-check-circle {
-    transform: rotate(0turn);
+    margin-bottom: 27px;
 }
 
 .recipe-card__meal-kind {
+    align-self: start;
     font-size: 16px;
+    width: 100%; /*parce que user agent le met en block alors que tu voudrais un inline*/
     font-weight: normal;
     /*text-decoration: solid underline #34a689;*/
     background-image: linear-gradient(#34a689, #34a689);
@@ -44,26 +44,40 @@
 }
 
 .recipe-card__recipe h3 {
-    margin: 0 0 5px 0;
+    margin: 0 0 2px 0;
     font-size: 18px;
     font-weight: 900;
+    padding-top: 13px;
 }
 
 .recipe-card__recipe p {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    margin: 0 0 5px 0;
+    margin: 0;
 }
 
 .recipe-card__animate__3points {
     font-size: 16px;
+    padding-bottom: 8px;
 }
 
 .recipe-card__recipe--price {
     font-weight: 900;
     font-size: 16px;
     margin: 0 22px;
+    padding-bottom: 8px;
+}
+
+.fa-check-circle {
+    display: block;
+    color: #fff;
+    padding: 0 20px 0 18px;
+    height: 100%;
+    background-color: #99e2d0;
+    /*transform: rotate(-1turn);
+    transition: transform 250ms ease-in-out;
+    transition-delay: 150ms;*/
 }
 
 /*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
@@ -75,22 +89,17 @@ Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
     display: flex;
     justify-content: baseline;
     align-items: flex-end;
-    height: 100%;
-    padding-bottom: 14px;
     /*transform: scaleX(0);
     transition: transform 400ms ease-in-out;
     transform-origin: right 50%;*/
 }
 
-.fa-check-circle {
-    display: inline-block;
-    color: #fff;
-    padding: 0 20px 0 18px;
-    height: 100%;
-    background-color: #99e2d0;
-    /*transform: rotate(-1turn);
-    transition: transform 250ms ease-in-out;
-    transition-delay: 150ms;*/
+.recipe-card article:hover>.recipe-card__animate {
+    transform: translateX(-56px);
+}
+
+.recipe-card article:hover .fa-check-circle {
+    transform: rotate(0turn);
 }
 
 /*---------------------------------------------------------------------------------*/

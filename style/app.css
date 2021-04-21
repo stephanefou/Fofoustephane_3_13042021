@@ -1,7 +1,8 @@
 @import "base.css";
 @import "layouts.css";
-@import "module.css";
-@import "componentss.css";
-@import "recipe-card.css";
-@import "restaurant-card.css";
-@import "restaurant-intro.css";
+@import "module.css"; /* #1 */
+@import "components.css";
+@import "recipe-card.css"; /* #2 */
+@import "restaurant-card.css"; /* #1 */
+@import "restaurant-intro.css"; /* #2 */
+@import "header-a_la_francaise.css"; /* #2 */

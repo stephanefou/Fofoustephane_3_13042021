@@ -49,10 +49,10 @@ $clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
         background: $clr-to-lighten; /*ne marche pas avec background-color*/
         border-radius: 30px;
         padding: 16px 21px;
-    }
-    &:hover {
-        background: lighten ($clr-to-lighten, 10);
-    }    
+        &:hover {
+            background: lighten ($clr-to-lighten, 50%);
+        }
+    }   
 }
 
 .btn--command__text {

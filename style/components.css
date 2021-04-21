@@ -50,6 +50,10 @@
     justify-content: center;
 }
 
+.btn--command {
+    margin: 35px 0 78px 0;
+}
+
 .btn__text, .btn--command__text {
     display: inline-block; /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
     color: #fff;
@@ -60,4 +64,8 @@
 
 .btn--command__text {
     padding: 16px 47px;
+}
+
+.btn:hover, .btn--command:hover {
+    background: linear-gradient(darken(#FF79DA, 20%), darken(#9356DC, 20%));
 }

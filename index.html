@@ -3,10 +3,9 @@
 <head>
     <title>oh my food</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
     <link rel="stylesheet" href="style/app.css" />
-    <script src="https://kit.fontawesome.com/518eb70a16.js" crossorigin="anonymous"></script> <!--Script obtenu en demandant un kit à la plateforme font awesome-->
-    
+    <script src="https://kit.fontawesome.com/518eb70a16.js" crossorigin="anonymous"></script> <!--Script obtenu en demandant un kit à la plateforme font awesome--> 
 </head>
 
 <body>
@@ -22,17 +21,17 @@
 <!----------------------------------------------------------*\
     SEARCH ZONE
 \*----------------------------------------------------------->
-    <div class="localisation-display">
-        <i class="fas fa-map-marker-alt localisation-display__map-marker-icon"></i>
-        <input class="localisation-display__search-input" type="search" placeholder="Paris, Belleville">
-    </div>
+<div class="localisation-display">
+    <i class="fas fa-map-marker-alt localisation-display__map-marker-icon"></i>
+    <input class="localisation-display__search-input" type="search" placeholder="Paris, Belleville">
+</div>
 
 <!----------------------------------------------------------*\
     COMPANY-INTRODUCTION
 \*----------------------------------------------------------->
 <div class="introduction">
     <h1>Réservez le menu qui vous convient</h1>
-    <p>Découvrez des restaurants d'exception, sélectionnés par  nos soins.</p>
+    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
     <div class="btn">
         <a href="index.html" title="aller à la page d'accueil">
             <span class="btn__text">Explorer nos restaurants</span>
@@ -41,108 +40,125 @@
 </div>
 
 <!----------------------------------------------------------*\
-    BTN COMMAND
+    OPERATION/STEP #1
 \*----------------------------------------------------------->
-<div class="btn--command">
-    <a href="index.html" title="aller à la page d'accueil">
-        <span class="btn--command__text">commander</span>
-    </a>
-</div>
+<section class="operation">
+    <h2>Fonctionnement</h2>
+    <article>
+        <span class="operation__number">1</span>
+        <i class="fas operation__icon fa-mobile-alt"></i>
+        <div class="operation__description">
+            <p>Choisissez un restaurant</p>
+        </div>
+    </article>
+<!----------------------------------------------------------*\
+    STEP #2
+\*----------------------------------------------------------->
+    <article>
+        <span class="operation__number">2</span>
+        <i class="fas operation__icon fa-list-ul"></i>
+        <div class="operation__description">
+            <p>Composez votre menu</p>
+        </div>
+    </article>
+<!----------------------------------------------------------*\
+    STEP #3
+\*----------------------------------------------------------->
+    <article>
+        <span class="operation__number">3</span>
+        <i class="fas operation__icon fa-store"></i>
+        <div class="operation__description">
+            <p>Dégustez au restaurant</p>
+        </div>
+    </article>
+</section>
 
 <!----------------------------------------------------------*\
-    OPERATION
+    RESTAURANT/CARD #1
 \*----------------------------------------------------------->
-    <div class="operation">
-        <h2>Fonctionnement</h2>
+<section class="restaurant-card">
+    <h2>Restaurants</h2>
         <article>
-            <span class="operation__number">1</span>
-            <i class="fas fa-mobile-alt operation__icon"></i>
-            <div class="operation__description">
-                <p>Choisissez un restaurant</p>
-            </div>
-        </article>
-    </div>
-
-<!----------------------------------------------------------*\
-    RESTAURANT-CARD
-\*----------------------------------------------------------->
-    <div class="restaurant-card">
-        <h2>Restaurants</h2>
-        <article>
-            <a href="a_la_francaise_page.html" title="Aller sur la page du restaurant 'à la française'">
+            <a href="la_palette_du_gout.html" title="Aller sur la page du restaurant 'La palette du goût'">
                 <span class="restaurant-card--newest">Nouveau</span>
-                <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
+                <img class="restaurant-card__photo" src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Friand de crudités accompagné de saumon.">
                 <div class="restaurant-card__heading">
                     <div class="restaurant-card__heading__title">
-                        <h3>À la française</h3> 
-                        <p>Cité rouge</p>
+                        <h3>La palette du goût</h3> 
+                        <p>Ménilmontant</p>
                     </div>
                     <div class="restaurant-card__heading__opinion">
                         <span class="restaurant-card__heading__opinion__icon">
                             <i class="fas fa-heart restaurant-card__hover-icon"></i>
-                            <i class="far fa-heart restaurant-card__default-icon"></i>                        
+                            <i class="far fa-heart restaurant-card__default-icon"></i>                     
                         </span>
                     </div>
                 </div>
             </a>
         </article>
-    </div>
 
     <!----------------------------------------------------------*\
-        RESTAURANT-INTRO
+        CARD #2
     \*----------------------------------------------------------->
-    <div class="restaurant-intro">
-        <img class="restaurant-intro__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
-        <div class="restaurant-intro__heading">
-            <h1 class="restaurant-intro__heading__title">À la française</h1>
-            <div class="restaurant-intro__heading__opinion">
-                <span class="restaurant-intro__heading__opinion__icon">
-                    <i class="fas fa-heart restaurant-intro__hover-icon"></i>
-                    <i class="far fa-heart restaurant-intro__default-icon"></i>                        
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <!----------------------------------------------------------*\
-        recipe-card
-    \*----------------------------------------------------------->
-    <!--<div class="recipe-card">
-        <h2 class="recipe-card__meal-kind">ENTRÉES</h2> 
-        <article>
-            <div class="recipe-card__recipe">
-                <h3>Tartare de poulpe acidulé</h3>
-                <p class="recipe-card__recipe--byline">Aux zests d'orange<span class="recipe-card__recipe--price">25€</span></p>
-            </div>
-            <div class="recipe-card__animate-square">
-                <i class="fas fa-check-circle"></i>
-            </div>
-        </article>
-    </div>-->
-
-    <!----------------------------------------------------------*\
-        RECIPE-CARD
-    \*----------------------------------------------------------->
-    <div class="recipe-card">
-        <h2 class="recipe-card__meal-kind">ENTRÉES</h2> 
-        <article>
-            <div class="recipe-card__recipe">
-                <h3>Tartare de poulpe acidulé</h3>
-                <p class="recipe-card__recipe--byline">Aux zests d'orange</p>
-            </div>
-            <div class="recipe-card__animate">
-                <section class="recipe-card__animate__3points">
-                    <span>...</span>
-                </section>
-                <section class="recipe-card__recipe--price">
-                    <span>25€</span>
-                </section>
-                <div class="recipe-card__animate__green-square">
-                    <i class="fas fa-check-circle"></i>
+    <article>
+        <a href="la_note_enchantee.html" title="Aller sur la page du restaurant 'La note enchantée'">
+            <span class="restaurant-card--newest">Nouveau</span>
+            <img class="restaurant-card__photo" src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="falafels et poulet à la sauce tomate et aux olives.">
+            <div class="restaurant-card__heading">
+                <div class="restaurant-card__heading__title">
+                    <h3>La note enchantée</h3> 
+                    <p>Charonne</p>
+                </div>
+                <div class="restaurant-card__heading__opinion">
+                    <span class="restaurant-card__heading__opinion__icon">
+                        <i class="fas fa-heart restaurant-card__hover-icon"></i>
+                        <i class="far fa-heart restaurant-card__default-icon"></i>                     
+                    </span>
                 </div>
             </div>
-        </article>
-    </div>
+        </a>
+    </article>
+    <!----------------------------------------------------------*\
+        CARD #3
+    \*----------------------------------------------------------->
+    <article>
+        <a href="a_la_francaise.html" title="Aller sur la page du restaurant 'À la française'">
+            <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
+            <div class="restaurant-card__heading">
+                <div class="restaurant-card__heading__title">
+                    <h3>À la française</h3> 
+                    <p>Cité rouge</p>
+                </div>
+                <div class="restaurant-card__heading__opinion">
+                    <span class="restaurant-card__heading__opinion__icon">
+                        <i class="fas fa-heart restaurant-card__hover-icon"></i>
+                        <i class="far fa-heart restaurant-card__default-icon"></i>                     
+                    </span>
+                </div>
+            </div>
+        </a>
+    </article>
+    <!----------------------------------------------------------*\
+        CARD #4
+    \*----------------------------------------------------------->
+    <article>
+        <a href="le_delice_des_sens.html" title="Aller sur la page du restaurant 'Le délice des sens'">
+            <img class="restaurant-card__photo" src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="poisson en sauce et ses léfumes frais.">
+            <div class="restaurant-card__heading">
+                <div class="restaurant-card__heading__title">
+                    <h3>Le délice des sens</h3> 
+                    <p>Folie-Méricourt</p>
+                </div>
+                <div class="restaurant-card__heading__opinion">
+                    <span class="restaurant-card__heading__opinion__icon">
+                        <i class="fas fa-heart restaurant-card__hover-icon"></i>
+                        <i class="far fa-heart restaurant-card__default-icon"></i>                     
+                    </span>
+                </div>
+            </div>
+        </a>
+    </article>
+</section>        
 
 <!----------------------------------------------------------*\
     FOOTER
