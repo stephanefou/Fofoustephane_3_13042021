@@ -23,7 +23,7 @@
     border-radius: 30px;
   }
   
-.number {
+.operation__number {
     color: #fff;
     background-color: #9356DC ;
     border-radius: 20px;
@@ -32,11 +32,14 @@
     left: -10px;
 }
 
-.fa-mobile-alt {
+.operation__icon {
     padding-left: 8px;
+    font-size: 20px;
 }
 
 .operation__description {
+    font-size: 16px;
+    font-weight: 600;
     margin-left: 30px;
     margin-right: auto;
 }

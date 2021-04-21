@@ -4,7 +4,7 @@
     padding: 24px 0 8px 0;
 }
 
-.fa-arrow-left {
+.header__arrow-icon {
     position: absolute;
     color: #353535;
     margin-right: auto;
@@ -18,12 +18,12 @@
     padding-left: 20px;
 }
 
-.logo-container {
+.header__logo-container {
     display: flex inline-block;
     align-self: center;
 }
 
-.header-logo {
+.header__logo-container__logo {
     width: 154px;
     height: auto;
 }

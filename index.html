@@ -11,11 +11,11 @@
 
 <body>
 <!----------------------------------------------------------*\
-    EN-TÊTE/LOGO
+    HEADER
 \*----------------------------------------------------------->
 <header class="header">
-    <div class="logo-container">
-        <a href="index.html" title="aller à la page d'accueil"><img class="header-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
+    <div class="header__logo-container">
+        <a href="index.html" title="aller à la page d'accueil"><img class="header__logo-container__logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
     </div>
 </header>
 
@@ -23,7 +23,7 @@
     SEARCH ZONE
 \*----------------------------------------------------------->
     <div class="localisation-display">
-        <i class="fas fa-map-marker-alt"></i>
+        <i class="fas fa-map-marker-alt localisation-display__map-marker-icon"></i>
         <input class="localisation-display__search-input" type="search" placeholder="Paris, Belleville">
     </div>
 
@@ -33,19 +33,19 @@
 <div class="introduction">
     <h1>Réservez le menu qui vous convient</h1>
     <p>Découvrez des restaurants d'exception, sélectionnés par  nos soins.</p>
-    <div class="btn-explore">
+    <div class="btn">
         <a href="index.html" title="aller à la page d'accueil">
-            <span class="btn-explore__text-invite">Explorer nos restaurants</span>
+            <span class="btn__text">Explorer nos restaurants</span>
         </a>
     </div>
 </div>
 
 <!----------------------------------------------------------*\
-    BTN
+    BTN COMMAND
 \*----------------------------------------------------------->
-<div class="btn-explore">
+<div class="btn--command">
     <a href="index.html" title="aller à la page d'accueil">
-        <span class="btn-explore__text-invite">Explorer nos restaurants</span>
+        <span class="btn--command__text">commander</span>
     </a>
 </div>
 
@@ -55,8 +55,8 @@
     <div class="operation">
         <h2>Fonctionnement</h2>
         <article>
-            <span class="number">1</span>
-            <i class="operation__icon fas fa-mobile-alt"></i>
+            <span class="operation__number">1</span>
+            <i class="fas fa-mobile-alt operation__icon"></i>
             <div class="operation__description">
                 <p>Choisissez un restaurant</p>
             </div>
@@ -69,7 +69,7 @@
     <div class="restaurant-card">
         <h2>Restaurants</h2>
         <article>
-            <a href="a_la_francaise.html" title="Aller sur la page du restaurant 'à la française'">
+            <a href="a_la_francaise_page.html" title="Aller sur la page du restaurant 'à la française'">
                 <span class="restaurant-card--newest">Nouveau</span>
                 <img class="restaurant-card__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="tartine oeuf poché en sauce sur lit d'épinard.">
                 <div class="restaurant-card__heading">
@@ -89,55 +89,55 @@
     </div>
 
     <!----------------------------------------------------------*\
-        RESTAURANT-PAGE
+        RESTAURANT-INTRO
     \*----------------------------------------------------------->
-    <div class="restaurant-page">
-        <img class="restaurant-page__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
-        <div class="restaurant-page__heading">
-            <h1 class="restaurant-page__heading__title">À la française</h1>
-            <div class="restaurant-page__heading__opinion">
-                <span class="restaurant-page__heading__opinion__icon">
-                    <i class="fas fa-heart restaurant-page__hover-icon"></i>
-                    <i class="far fa-heart restaurant-page__default-icon"></i>                        
+    <div class="restaurant-intro">
+        <img class="restaurant-intro__photo" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Bienvenue au restaurant à la française !">
+        <div class="restaurant-intro__heading">
+            <h1 class="restaurant-intro__heading__title">À la française</h1>
+            <div class="restaurant-intro__heading__opinion">
+                <span class="restaurant-intro__heading__opinion__icon">
+                    <i class="fas fa-heart restaurant-intro__hover-icon"></i>
+                    <i class="far fa-heart restaurant-intro__default-icon"></i>                        
                 </span>
             </div>
         </div>
     </div>
 
     <!----------------------------------------------------------*\
-        CARD-MENU
+        recipe-card
     \*----------------------------------------------------------->
-    <!--<div class="card-menu">
-        <h2 class="card-menu__meal-kind">ENTRÉES</h2> 
+    <!--<div class="recipe-card">
+        <h2 class="recipe-card__meal-kind">ENTRÉES</h2> 
         <article>
-            <div class="card-menu__recipe">
+            <div class="recipe-card__recipe">
                 <h3>Tartare de poulpe acidulé</h3>
-                <p class="card-menu__recipe--byline">Aux zests d'orange<span class="card-menu__recipe--price">25€</span></p>
+                <p class="recipe-card__recipe--byline">Aux zests d'orange<span class="recipe-card__recipe--price">25€</span></p>
             </div>
-            <div class="card-menu__animate-square">
+            <div class="recipe-card__animate-square">
                 <i class="fas fa-check-circle"></i>
             </div>
         </article>
     </div>-->
 
     <!----------------------------------------------------------*\
-        CARD-MENU
+        RECIPE-CARD
     \*----------------------------------------------------------->
-    <div class="card-menu">
-        <h2 class="card-menu__meal-kind">ENTRÉES</h2> 
+    <div class="recipe-card">
+        <h2 class="recipe-card__meal-kind">ENTRÉES</h2> 
         <article>
-            <div class="card-menu__recipe">
+            <div class="recipe-card__recipe">
                 <h3>Tartare de poulpe acidulé</h3>
-                <p class="card-menu__recipe--byline">Aux zests d'orange</p>
+                <p class="recipe-card__recipe--byline">Aux zests d'orange</p>
             </div>
-            <div class="card-menu__animate">
-                <section class="card-menu__animate__3points">
+            <div class="recipe-card__animate">
+                <section class="recipe-card__animate__3points">
                     <span>...</span>
                 </section>
-                <section class="card-menu__recipe--price">
+                <section class="recipe-card__recipe--price">
                     <span>25€</span>
                 </section>
-                <div class="card-menu__animate__green-square">
+                <div class="recipe-card__animate__green-square">
                     <i class="fas fa-check-circle"></i>
                 </div>
             </div>
@@ -148,8 +148,8 @@
     FOOTER
 \*----------------------------------------------------------->
 <footer class="footer">
-    <div class="logo-container--footer">
-        <a href="index.html" title="aller à la page d'accueil"><img class="footer-logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
+    <div class="footer__logo-container">
+        <a href="index.html" title="aller à la page d'accueil"><img class="footer__logo-container__logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
     </div>
     <div>
         <ul>

@@ -1,11 +1,11 @@
-.card-menu {
+.recipe-card {
     display:flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f6f6f6;
 }
 
-.card-menu article {
+.recipe-card article {
     display:flex;
     align-self: center;
     align-items: center;
@@ -17,15 +17,15 @@
     overflow: hidden; /*pour rogner le square*/
 }
 
-.card-menu article:hover>.card-menu__animate {
+.recipe-card article:hover>.recipe-card__animate {
     transform: translateX(-56px);
 }
 
-.card-menu article:hover .fa-check-circle {
+.recipe-card article:hover .fa-check-circle {
     transform: rotate(0turn);
 }
 
-.card-menu__meal-kind {
+.recipe-card__meal-kind {
     font-size: 16px;
     font-weight: normal;
     /*text-decoration: solid underline #34a689;*/
@@ -37,29 +37,30 @@
     margin-left: 20px;
 }
 
-.card-menu__recipe {
+.recipe-card__recipe {
     width: 100%;
     margin: 0;
     padding: 0 20px 0 9px;
 }
 
-.card-menu__recipe h3 {
+.recipe-card__recipe h3 {
     margin: 0 0 5px 0;
     font-size: 18px;
     font-weight: 900;
 }
 
-.card-menu__recipe p {
+.recipe-card__recipe p {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+    margin: 0 0 5px 0;
 }
 
-.card-menu__animate__3points {
+.recipe-card__animate__3points {
     font-size: 16px;
 }
 
-.card-menu__recipe--price {
+.recipe-card__recipe--price {
     font-weight: 900;
     font-size: 16px;
     margin: 0 22px;
@@ -69,7 +70,7 @@
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
 
-.card-menu__animate {
+.recipe-card__animate {
     /*opacity: 0;*/
     display: flex;
     justify-content: baseline;
@@ -92,6 +93,7 @@ Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
     transition-delay: 150ms;*/
 }
 
+/*---------------------------------------------------------------------------------*/
 $easing: cubic-bezier (.49,.18,.23,1);
 $width: 33vh;
 $height: 72vh;
