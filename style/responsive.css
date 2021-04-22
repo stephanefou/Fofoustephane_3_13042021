@@ -1,0 +1,143 @@
+@media screen and (min-width: 576px) {
+    .restaurant-intro {
+        align-items: center;
+    }
+
+    .restaurant-intro__heading, .recipe-card {
+        width: 88%;
+    }
+
+    .recipe-card {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .localisation-display {
+        justify-content: flex-start;
+        width: 250px;
+        border-radius: 25px;
+        position: relative;
+        bottom: -20px;
+        border: solid white 4px;
+        margin-left: 20px;
+    }
+
+    /*.footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__logo-container, .footer ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+
+    }*/
+
+    .footer, .footer__logo-container, .footer ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        align-items: center;
+
+    }
+    /*----------------------------------------------------------*\
+        OPERATION/STEP #1
+    \*----------------------------------------------------------*/
+    .operation {
+        padding: 47px 20px 43px 20px;
+    }
+
+    .operation h2 {
+        padding-left: 0;
+    }
+
+    .operation article {
+        width: 45%;
+    }
+
+    .operation article:nth-child(2) {
+        align-self: flex-start;
+    }
+
+    .operation article:nth-child(4) {
+        align-self: flex-end;
+    }
+
+    .restaurant-card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 24px;
+        row-gap: 24px;
+        padding: 54px 20px 43px 20px;
+    }
+
+    .restaurant-card h2 {
+        width: 100%;
+        padding-left: 2px;
+    }
+
+    .restaurant-card article {
+        width: 48%;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .recipe-card section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+        column-gap: 24px;
+    }
+    
+    .recipe-card article {
+        width: 48.5%;
+    }
+
+    .recipe-card__meal-kind {
+        margin-left: 5px;
+    }
+
+    .restaurant-card article {
+        width: 31.5%;
+    }
+}
+
+@media screen and (min-width: 1250px) {
+    .localisation-display {
+        margin: auto;
+    }
+
+    .operation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .operation article {
+        width: 30%;
+    }
+
+    .operation article:nth-child(2) {
+        align-self: inherit;
+    }
+
+    .operation article:nth-child(4) {
+        align-self: inherit;
+    }
+
+    .restaurant-card article {
+        min-width: 20%;
+        max-width: 23.5%;
+    }
+
+    .recipe-card article {
+        width: 31.5%;
+    }
+}

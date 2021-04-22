@@ -1,6 +1,12 @@
+.main__pages {
+    display: flex;
+    flex-direction: column;
+}
+
 .recipe-card {
     display:flex;
     flex-direction: column;
+    justify-self: center;
     background-color: #f6f6f6;
 }
 
@@ -26,7 +32,7 @@
 .recipe-card__meal-kind {
     align-self: start;
     font-size: 16px;
-    width: 100%; /*parce que user agent le met en block alors que tu voudrais un inline*/
+    width: 88%; /*parce que user agent le met en block alors que tu voudrais un inline*/
     font-weight: normal;
     /*text-decoration: solid underline #34a689;*/
     background-image: linear-gradient(#34a689, #34a689);
