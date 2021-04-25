@@ -42,8 +42,10 @@
 }
 
 .btn, .btn--command {
-  display: flex;
+  display: inline-block;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 .btn__text, .btn--command__text {
   display: inline-block;
@@ -54,12 +56,29 @@
   border-radius: 30px;
   padding: 16px 21px;
 }
-.btn__text:hover, .btn--command__text:hover {
-  background: linear-gradient(lighten(#FF79DA, 30%), lighten(#9356DC, 30%));
+.btn__text:hover::after, .btn--command__text:hover::after {
+  opacity: 1;
+  /*background: lighten ($clr-to-lighten, 50%); /*ne marche pas car hover est pseudo element et pour des animations il faut pseudoselecteur*/
+}
+.btn__text::after, .btn--command__text::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(lighten #FF79DA, 5 50%, lighten #9356DC, 10 50%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
+.btn--command {
+  margin: 35px 0 78px 0;
+}
 .btn--command__text {
   padding: 16px 47px;
 }
 
-/*# sourceMappingURL=componentss.css.map */
+/*# sourceMappingURL=componentsss.css.map */

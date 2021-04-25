@@ -5,6 +5,8 @@
     background-color: #eaeaea;
     height: 47px;
     box-shadow: inset 0px 3px 5px #D0D0D0;
+    position: relative; /*necessaire uniquement pour l'animation pour que introduction ne passe pas au dessus...*/
+    z-index: 1000;
 }
 
 .localisation-display__search-input {
@@ -69,3 +71,5 @@
 .btn:hover, .btn--command:hover {
     background: linear-gradient(darken(#FF79DA, 20%), darken(#9356DC, 20%));
 }
+
+/*background: linear-gradient(#f77dd4, #ab65fa);*/

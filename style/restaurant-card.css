@@ -97,6 +97,7 @@
   opacity: 0;
   font-size: 22px;
   z-index: 1;
+  transition: opacity 1200ms;
 }
 
 .restaurant-card__heading__opinion__icon .fas:hover {

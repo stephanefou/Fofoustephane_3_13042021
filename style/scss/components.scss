@@ -1,3 +1,5 @@
+
+@import "_variables.scss";
 $clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
 
 .localisation-display {
@@ -41,20 +43,41 @@ $clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
 }
 
 .btn, .btn--command {
-    display: flex;
+    display: inline-block;
     justify-content: center;
+    position: relative;
+    z-index: 1;
     &__text {
         display: inline-block; /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
         color: #fff;
-        background: $clr-to-lighten; /*ne marche pas avec background-color*/
+        background: linear-gradient($clr-secondary, $clr-primary); /*ne marche pas avec background-color*/
         border-radius: 30px;
         padding: 16px 21px;
         &:hover {
-            background: lighten ($clr-to-lighten, 50%);
+            &::after {
+                opacity: 1;
+            /*background: lighten ($clr-to-lighten, 50%); /*ne marche pas car hover est pseudo element et pour des animations il faut pseudoselecteur*/
+            }
         }
-    }   
+        &::after {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(lighten ($clr-secondary, 5) 50%, lighten ($clr-primary, 10) 50%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+    }
 }
 
-.btn--command__text {
-    padding: 16px 47px;
+.btn--command {
+    margin: 35px 0 78px 0;
+    &__text {
+        padding: 16px 47px;
+    }
 }
