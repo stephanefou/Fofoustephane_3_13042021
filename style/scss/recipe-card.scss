@@ -1,19 +1,29 @@
+.main__pages {
+    display: flex;
+    flex-direction: column;
+}
+
 .recipe-card {
     display:flex;
     flex-direction: column;
     justify-content: center;
     background-color: #f6f6f6;
+    section {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0 0 10px 0;
+    }
     article {
         display:flex;
-        align-self: center;
-        align-items: center;
+        justify-content: center;
         width: 92.98%;
         height: 65px;
         border-radius: 15px;
         background-color: white;
         box-shadow: 2px 2px 10px #e7e7e7;
         overflow: hidden; /*pour rogner le square*/
-        
+        margin-bottom: 27px;
     }
     article:hover>&__animate {
         transform: translateX(-56px);
@@ -22,6 +32,8 @@
         transform: rotate(0turn);
     }
     &__meal-kind {
+        display: flex;
+        align-self: start;
         font-size: 16px;
         font-weight: normal;
         /*text-decoration: solid underline #34a689;*/

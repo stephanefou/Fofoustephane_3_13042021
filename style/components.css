@@ -62,14 +62,15 @@
     background: linear-gradient(#FF79DA, #9356DC); /*ne marche pas avec background-color*/
     border-radius: 30px;
     padding: 16px 21px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn--command__text {
     padding: 16px 47px;
 }
 
-.btn:hover, .btn--command:hover {
-    background: linear-gradient(darken(#FF79DA, 20%), darken(#9356DC, 20%));
+.btn__text:hover, .btn--command__text:hover {
+    background: linear-gradient(#f77dd4, #ab65fa);
 }
 
 /*background: linear-gradient(#f77dd4, #ab65fa);*/

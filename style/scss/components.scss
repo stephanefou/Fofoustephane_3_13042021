@@ -1,6 +1,4 @@
-
 @import "_variables.scss";
-$clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
 
 .localisation-display {
     display: flex;
@@ -9,6 +7,8 @@ $clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
     background-color: #eaeaea;
     height: 47px;
     box-shadow: inset 0px 3px 5px #D0D0D0;
+    position: relative; /*necessaire uniquement pour l'animation pour que introduction ne passe pas au dessus...*/
+    z-index: 1000;
     &__search-input {
         border: solid #eaeaea;
         padding: 4px 0 0 0 ; /*user agent met un padding qui affiche un border/background white ou #eaeaea*/
@@ -43,34 +43,17 @@ $clr-to-lighten: linear-gradient(#FF79DA, #9356DC);
 }
 
 .btn, .btn--command {
-    display: inline-block;
+    display: flex;
     justify-content: center;
-    position: relative;
-    z-index: 1;
     &__text {
         display: inline-block; /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
         color: #fff;
         background: linear-gradient($clr-secondary, $clr-primary); /*ne marche pas avec background-color*/
         border-radius: 30px;
         padding: 16px 21px;
+        transition: all 0.3s ease-in-out;
         &:hover {
-            &::after {
-                opacity: 1;
-            /*background: lighten ($clr-to-lighten, 50%); /*ne marche pas car hover est pseudo element et pour des animations il faut pseudoselecteur*/
-            }
-        }
-        &::after {
-            display: inline-block;
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(lighten ($clr-secondary, 5) 50%, lighten ($clr-primary, 10) 50%);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
+            background: linear-gradient(#f77dd4, #ab65fa);
         }
     }
 }

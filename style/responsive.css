@@ -10,6 +10,10 @@
     .recipe-card {
         align-self: center;
     }
+
+    .header--page__arrow-icon {
+        margin-left: 7%;
+    }
 }
 
 @media screen and (min-width: 768px) {

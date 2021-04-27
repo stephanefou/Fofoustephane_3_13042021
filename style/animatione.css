@@ -115,8 +115,33 @@ $delay-for-next: $anim-dur + $anim-delay;*/
     animation: element-emerging 800ms 5000ms both cubic-bezier(.18,0,0,1.12);
 }
 
-
-
 .btn--command {
     animation: element-emerging 1200ms 5000ms both cubic-bezier(.18,0,0,1.12);
+}
+
+
+@keyframes headshake {
+    12% {
+        /*// entièrement à droite*/
+        transform: translateX(8px);
+    }
+
+    37% {
+        /*// entièrement à gauche*/
+        transform: translateX(8px*-1);
+    }
+
+    62% {
+        /*// entièrement en haut*/
+        transform: translateY(8px);
+    }
+
+    87% {
+        /*// entièrement en bas*/
+        transform: translateY(8px* -1);
+    }
+}
+
+.header--page:hover .header--page__arrow-icon {
+    animation: headshake 150ms cubic-bezier(.4,.1,.6,.9) 3;/* animation-iteration-count =2 est directement intégré dans la propriété raccourcie animation:*/
 }

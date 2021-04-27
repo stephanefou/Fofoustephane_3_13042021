@@ -6,7 +6,7 @@
     height: 288px;
 }
 
-.restaurant-intro img {/*en mettant juste article tu decontiens img de l'article à la française, pas assez spécifique*/
+.restaurant-intro img {/*en mettant juste article pour le sélecteur tu decontiens img de l'article à la française, pas assez spécifique*/
     position: absolute; /*c'est bon mais tu ne comprends pas pourquoi c'est nécessaire par rapport au z-index*/
     left: 0;
     bottom: 0;
@@ -25,7 +25,7 @@
     padding: 20px 18px 10px 18px;
     z-index: 1;
     position: relative;
-    bottom: -1px; /*juste pour cacher le défaut de séparation de deux div, si tu l'enlèves tu verras*/
+    /*bottom:-1px; /*juste pour cacher le défaut de séparation de deux div, si tu l'enlèves tu verras*//*finalement pas utile?*/
 }
 
 .restaurant-intro__heading h1 {
