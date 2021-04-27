@@ -1,0 +1,16 @@
+@flexbox {
+    display: flex;
+}
+
+/*Box Shadow */
+@mixin shadowbox {
+    box-shadow: 0 5px 15px 0 #c3c3c3;
+  }
+  
+  @mixin shadowOne {
+    box-shadow: 0 5px 15px 0 #9d9d9d;
+  }
+  /*Background-Color*/
+  @mixin lineargarden {
+    background: linear-gradient(#ff79da, #9356dc);
+  }

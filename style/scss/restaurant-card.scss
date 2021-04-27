@@ -81,6 +81,7 @@
                     opacity: 0;
                     font-size: 22px;
                     z-index: 1;
+                    transition: all 500ms;
                     &:hover {
                         /*opacity: 0;*/
                         opacity: 1;
