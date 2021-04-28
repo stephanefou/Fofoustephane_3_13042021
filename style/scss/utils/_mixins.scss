@@ -1,0 +1,17 @@
+@import "../utils/_variables.scss";
+
+@mixin btnbackground {
+    background: $clr-btn;
+}
+
+@mixin btnbackground-hover {
+    background: $clr-btn-hover;
+}
+
+@mixin boxshadow ($box-shadow-clr) {
+    box-shadow: 2px 2px 12px $box-shadow-clr;
+}
+
+@mixin boxshadow-hover ($box-shadow-clr--hover) {
+    box-shadow: 5px 5px 16px $box-shadow-clr--hover, -5px -5px 16px $box-shadow-clr--hover;
+}

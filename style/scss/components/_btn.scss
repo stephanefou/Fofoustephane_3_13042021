@@ -1,0 +1,31 @@
+@import "../utils/_variables.scss";
+@import "../utils/_mixins.scss";
+
+/*-----------------------------------------------------------*\
+    ALL PAGE/BTN
+\*-----------------------------------------------------------*/
+.btn, .btn--command {
+    display: flex;
+    justify-content: center;
+    &__text {
+        display: inline-block; /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
+        color: $clr-white;
+        @include btnbackground;
+        /*background: $clr-btn; /*linear gradient ne marche pas avec background-color*/
+        border-radius: 30px;
+        padding: 16px 21px;
+        @include boxshadow ($box-shadow-clr);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            @include btnbackground-hover;
+            @include boxshadow-hover ($box-shadow-clr--hover);
+        }
+    }
+}
+
+.btn--command {
+    margin: 35px 0 78px 0;
+    &__text {
+        padding: 16px 47px;
+    }
+}

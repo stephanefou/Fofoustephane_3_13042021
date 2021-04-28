@@ -1,0 +1,230 @@
+/*----------------------------------------------------------*\
+    LOADER
+\*----------------------------------------------------------*/
+$cd-box: rgb(231, 247, 246);
+$cd-txt: #6300a0;
+$cd-danger: #b20a37;
+
+/*
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}*/
+
+/*html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 1.5rem;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }*/
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & span {
+        margin: 1rem;
+    }
+}
+
+$size: 3vh;
+$anim-dur: 1000ms;
+$anim-delay: 200ms;
+
+$cd-bars-inv: #0E397F;
+
+
+.load {
+    width: $size * 10;
+    height: $size* 7.5;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    
+    &__bar {
+        background-color: #15DEA5;
+        height: 100%;
+        width: $size;
+        animation: bars $anim-dur backwards infinite alternate ease-in-out;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+                animation-delay: $anim-delay * $i + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                // animation-fill-mode: forwards;
+                background: $cd-bars-inv;
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+        @for $i from 1 through 5 {
+            &--#{$i + 5} {
+                animation-direction: alternate-reverse;
+                background: pink;
+                animation-delay: $anim-delay * $i + (random(100)*20ms);
+                
+                &:hover {
+                    animation-play-state: paused;
+                }
+            }
+        }
+    }
+}
+
+  
+@keyframes bars {
+    0% { 
+        transform: scaleY(0.5);
+    }  
+    100% { 
+        transform: scaleY(1.0);
+    }
+}
+
+
+/*----------------------------------------------------------*\
+    HOME PAGE/EMERGING ELEMENT
+\*----------------------------------------------------------*/
+@keyframes element-emerging{
+    0% {
+        transform: scale(0);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header__logo-container__logo, .footer {
+    animation: element-emerging 300ms 300ms both;
+}
+
+.localisation-display, .introduction {
+    animation: element-emerging 300ms 600ms both;
+}
+
+.operation {
+    animation: element-emerging 300ms 900ms both;
+}
+
+.restaurant-card {
+    animation: element-emerging 300ms 1200ms both;
+}
+
+/*----------------------------------------------------------*\
+    ANNEX PAGE/EMERGING ELEMENT
+\*----------------------------------------------------------*/
+.entries .recipe-card__meal-kind  {
+    animation: element-emerging 300ms 300ms both;
+}
+
+.entries article:nth-child(1) {
+    animation: element-emerging 500ms 600ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.entries article:nth-child(2) {
+    animation: element-emerging 500ms 750ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.entries article:nth-child(3) {
+    animation: element-emerging 500ms 900ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.entries article:nth-child(4) {
+    animation: element-emerging 500ms 1050ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.entries article:nth-child(5) {
+    animation: element-emerging 500ms 1200ms both cubic-bezier(.18,0,0,1.12);
+}
+
+/*----------------------------------------------------------*/
+
+.dishes .recipe-card__meal-kind  {
+    animation: element-emerging 300ms 1350ms both;
+}
+
+.dishes article:nth-child(1) {
+    animation: element-emerging 500ms 1650ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.dishes article:nth-child(2) {
+    animation: element-emerging 500ms 1800ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.dishes article:nth-child(3) {
+    animation: element-emerging 500ms 1950ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.dishes article:nth-child(4) {
+    animation: element-emerging 500ms 2100ms both cubic-bezier(.18,0,0,1.12);
+}
+
+/*----------------------------------------------------------*/
+
+.desserts .recipe-card__meal-kind  {
+    animation: element-emerging 300ms 2250ms both;
+}
+
+.desserts article:nth-child(1) {
+    animation: element-emerging 500ms 2550ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.desserts article:nth-child(2) {
+    animation: element-emerging 500ms 2700ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.desserts article:nth-child(3) {
+    animation: element-emerging 500ms 2850ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.desserts article:nth-child(4) {
+    animation: element-emerging 500ms 3000ms both cubic-bezier(.18,0,0,1.12);
+}
+
+.btn--command {
+    animation: element-emerging 500ms 3150ms both cubic-bezier(.18,0,0,1.12);
+}
+
+/*----------------------------------------------------------*\
+    ANNEX PAGE/HEADSHAKE
+\*----------------------------------------------------------*/
+@keyframes headshake {
+    12% {
+        /*// entièrement à droite*/
+        transform: translateX(8px);
+    }
+
+    37% {
+        /*// entièrement à gauche*/
+        transform: translateX(8px*-1);
+    }
+
+    62% {
+        /*// entièrement en haut*/
+        transform: translateY(8px);
+    }
+
+    87% {
+        /*// entièrement en bas*/
+        transform: translateY(8px* -1);
+    }
+}
+
+.header--page:hover .header--page__arrow-icon {
+    animation: headshake 150ms cubic-bezier(.4,.1,.6,.9) 3;/* animation-iteration-count =2 est directement intégré dans la propriété raccourcie animation:*/
+}

@@ -4,7 +4,7 @@
     <title>oh my food/a_la_francaise</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style/app.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <script src="https://kit.fontawesome.com/518eb70a16.js" crossorigin="anonymous"></script> <!--Script obtenu en demandant un kit à la plateforme font awesome-->
 </head>
 
@@ -12,7 +12,7 @@
 <!----------------------------------------------------------*\
     EN-TÊTE/LOGO
 \*----------------------------------------------------------->
-<header class="header--page">
+<header id="header--page__anchor" class="header--page">
     <a href="index.html" title="aller à la page d'accueil"><i class="fas fa-arrow-left header--page__arrow-icon"></i></a>
     <div class="header--page__logo-container">
         <img class="header--page__logo-container__logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg">
@@ -155,11 +155,12 @@
                 </div>
             </article>
         </section>
+
         <!----------------------------------------------------------*\
             BTN COMMAND
         \*----------------------------------------------------------->
         <div class="btn--command">
-            <a href="#" title="valider votre commande">
+            <a href="#none" title="valider votre commande">
                 <span class="btn--command__text">Commander</span>
             </a>
         </div>
@@ -171,7 +172,7 @@
 \*----------------------------------------------------------->
 <footer class="footer">
     <div class="footer__logo-container">
-        <a href="index.html" title="aller à la page d'accueil"><img class="footer__logo-container__logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
+        <a href="#header--page__anchor" title="haut de page"><img class="footer__logo-container__logo" alt="logo-oh my food" src="img/logo/ohmyfood.svg"></a>
     </div>
     <div>
         <ul>

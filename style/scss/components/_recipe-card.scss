@@ -1,0 +1,123 @@
+@import "../utils/_variables.scss";
+
+/*-----------------------------------------------------------*\
+    RECIPE-CARD
+\*-----------------------------------------------------------*/
+.recipe-card {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    background-color: $main-bg-clr;
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+    article {
+        display:flex;
+        justify-content: center;
+        width: 92.98%;
+        height: 65px;
+        border-radius: 15px;
+        background-color: $clr-white;
+        box-shadow: 2px 2px 10px $box-shadow-clr;
+        overflow: hidden; /*pour rogner le square*/
+        margin-bottom: 27px;
+    }
+    article:hover>&__animate {
+        transform: translateX(-56px);
+    }
+    article:hover .fa-check-circle {
+        transform: rotate(0turn);
+    }
+    &__meal-kind {
+        align-self: start;
+        font-size: 16px;
+        width: 88%; /*parce que user agent le met en block alors que tu voudrais un inline*/
+        font-weight: normal;
+        /*text-decoration: solid underline #34a689;*/
+        background-image: linear-gradient($clr-green-mint, $clr-green-mint);
+        background-position: bottom left; /*Adjust the background-position to move the line*/
+        background-size: 10% 3px; /*Adjust the background size to control length and height*/
+        background-repeat: no-repeat;
+        padding-bottom: 6px; /* this can also control the position */
+        margin-left: 20px;
+    }
+    &__recipe {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 0 9px;
+        overflow: hidden; /*empêche le rognage à gauche pour le text-overflow ci dessous*/
+        h3 {
+            margin: 0 0 2px 0;
+            font-size: 18px;
+            font-weight: 900;
+            padding-top: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
+        }
+        &--byline {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
+        }
+        &--price {
+            font-weight: 900;
+            font-size: 16px;
+            white-space: nowrap;
+            transform: translateX(47px);
+            transition: transform 400ms ease-in-out;
+            position: absolute;
+            top: 0;/*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+            left: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+            right: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+            bottom: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+            width: 25px;
+            margin: 37px 69px 0 auto; /*47 du translate + 22 du margin right normal*/
+        }
+    }
+    &__animate {
+        /*opacity: 0;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $clr-tertiary;
+        margin-left: 32px;
+        overflow: hidden; /*quand il sera invoqué pour lors du hover, il ne sortira pas du container*/
+        transform: translateX(50px);
+        transition: transform 400ms ease-in-out;
+        transform-origin: right 50%;
+    }
+}
+
+.fa-check-circle {
+    display: block;
+    color: #fff;
+    padding: 0 20px 0 18px;
+    transform: rotate(-1turn);
+    transition: transform 250ms ease-in-out;
+    transition-delay: 150ms;
+}
+
+/*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
+Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
+Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
+
+.recipe-card article:hover>.recipe-card__animate {
+    transform: translateX(0);
+}
+
+.recipe-card article:hover .fa-check-circle {
+    transform: rotate(0turn);
+}
+
+.recipe-card article:hover .recipe-card__recipe--price {
+    transform: translateX(0);
+}

@@ -1,6 +1,17 @@
-
-
-
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+@import "./base/base.scss";
+@import "./components/btn.scss";
+@import "./components/recipe-card.scss";
+@import "./components/restaurant-card.scss";
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+@import "./layouts/operation.scss";
+@import "./layouts/keyframes.scss";
+@import "./layouts/media.scss";
+@import "./pages/home-page__localisation.scss";
+@import "./pages/home-page__introduction.scss";
+@import "./pages/annex-page__restaurant-intro.scss";
 
 /*
 @import "./utils/variables";

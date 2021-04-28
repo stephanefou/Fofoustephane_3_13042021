@@ -1,0 +1,1112 @@
+@charset "UTF-8";
+/*#e7e7e7*/
+/*#e7e7e7*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  font-family: roboto, sans-serif;
+  margin: 0;
+  /*width: 100vw;*/
+  /*fais que la page depasse, parfois inutile*/
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main__pages {
+  display: flex;
+  flex-direction: column;
+}
+
+/*reset
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}*/
+/*#e7e7e7*/
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    ALL PAGE/BTN
+\*-----------------------------------------------------------*/
+.btn, .btn--command {
+  display: flex;
+  justify-content: center;
+}
+.btn__text, .btn--command__text {
+  display: inline-block;
+  /*sans cela, la div operation surplombe le btn explore quand text invite est entouré d'un lien*/
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  /*background: $clr-btn; /*linear gradient ne marche pas avec background-color*/
+  border-radius: 30px;
+  padding: 16px 21px;
+  box-shadow: 2px 2px 12px #e8e6eb;
+  transition: all 0.3s ease-in-out;
+}
+.btn__text:hover, .btn--command__text:hover {
+  background: linear-gradient(#ab65fa, #f77dd4);
+  box-shadow: 5px 5px 16px #D2D2D2, -5px -5px 16px #D2D2D2;
+}
+
+.btn--command {
+  margin: 35px 0 78px 0;
+}
+.btn--command__text {
+  padding: 16px 47px;
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    RECIPE-CARD
+\*-----------------------------------------------------------*/
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  background-color: #f6f6f6;
+}
+.recipe-card section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.recipe-card article {
+  display: flex;
+  justify-content: center;
+  width: 92.98%;
+  height: 65px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px #e8e6eb;
+  overflow: hidden;
+  /*pour rogner le square*/
+  margin-bottom: 27px;
+}
+article:hover > .recipe-card__animate {
+  transform: translateX(-56px);
+}
+.recipe-card article:hover .fa-check-circle {
+  transform: rotate(0turn);
+}
+.recipe-card__meal-kind {
+  align-self: start;
+  font-size: 16px;
+  width: 88%;
+  /*parce que user agent le met en block alors que tu voudrais un inline*/
+  font-weight: normal;
+  /*text-decoration: solid underline #34a689;*/
+  background-image: linear-gradient(#34a689, #34a689);
+  background-position: bottom left;
+  /*Adjust the background-position to move the line*/
+  background-size: 10% 3px;
+  /*Adjust the background size to control length and height*/
+  background-repeat: no-repeat;
+  padding-bottom: 6px;
+  /* this can also control the position */
+  margin-left: 20px;
+}
+.recipe-card__recipe {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0 9px;
+  overflow: hidden;
+  /*empêche le rognage à gauche pour le text-overflow ci dessous*/
+}
+.recipe-card__recipe h3 {
+  margin: 0 0 2px 0;
+  font-size: 18px;
+  font-weight: 900;
+  padding-top: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*ne va pas sans les 2 propriétés précédentes*/
+}
+.recipe-card__recipe--byline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*ne va pas sans les 2 propriétés précédentes*/
+}
+.recipe-card__recipe--price {
+  font-weight: 900;
+  font-size: 16px;
+  white-space: nowrap;
+  transform: translateX(47px);
+  transition: transform 400ms ease-in-out;
+  position: absolute;
+  top: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  left: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  right: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  bottom: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  width: 25px;
+  margin: 37px 69px 0 auto;
+  /*47 du translate + 22 du margin right normal*/
+}
+.recipe-card__animate {
+  /*opacity: 0;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  margin-left: 32px;
+  overflow: hidden;
+  /*quand il sera invoqué pour lors du hover, il ne sortira pas du container*/
+  transform: translateX(50px);
+  transition: transform 400ms ease-in-out;
+  transform-origin: right 50%;
+}
+
+.fa-check-circle {
+  display: block;
+  color: #fff;
+  padding: 0 20px 0 18px;
+  transform: rotate(-1turn);
+  transition: transform 250ms ease-in-out;
+  transition-delay: 150ms;
+}
+
+/*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
+Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
+Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
+.recipe-card article:hover > .recipe-card__animate {
+  transform: translateX(0);
+}
+
+.recipe-card article:hover .fa-check-circle {
+  transform: rotate(0turn);
+}
+
+.recipe-card article:hover .recipe-card__recipe--price {
+  transform: translateX(0);
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    RESTAURANT-CARD
+\*-----------------------------------------------------------*/
+.restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 54px 0 43px 0;
+}
+.restaurant-card--newest {
+  display: inline-block;
+  position: absolute;
+  /*Pour venir se superposer aux autres éléments*/
+  /*left: 67.5%; /*incompréhension à changer en responsive */
+  /*bottom: 82%; /*incompréhension */
+  /*margin-left: 76%;*/
+  top: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  left: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  right: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  bottom: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  width: 52px;
+  /*largeur de l'élément donc penser au padding pour une taille totale 76/27, avec 76 ici on est à une taille de 100 dans le devtool et surtout ne pas se tromper sur la taille du texte font-size ici il faut 13px ;*/
+  height: 15px;
+  /*hauteur de l'élément donc penser au padding pour une taille totale 76/27, avec 76 ici on est à une taille de 100 dans le devtool et surtout ne pas se tromper sur la taille du texte font-size ici il faut 13px ;*/
+  margin-left: auto;
+  margin-top: 12px;
+  margin-right: 12px;
+  font-size: 13px;
+  color: #34a689;
+  padding: 6px 12px;
+  background-color: #99E2D0;
+  border-radius: 3px;
+}
+.restaurant-card h2 {
+  align-self: flex-start;
+  font-size: 20px;
+  padding-left: 22px;
+  margin: 0 0 23px 0;
+}
+.restaurant-card article {
+  position: relative;
+  /* Pour que "--newest" ne "sorte" pas de son article parent et qu'il ne soit pas mal positionné avec le transform scale au moment du :hover */
+  width: 85.96%;
+  height: 239px;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #e8e6eb;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  margin-bottom: 17px;
+}
+.restaurant-card article:hover, .restaurant-card article:focus-within {
+  box-shadow: 0px 0px 7px 1px #D2D2D2;
+  transform: scale(1.05);
+}
+.restaurant-card article:focus-within {
+  outline: dotted black 1px;
+  border-radius: 10% 10%;
+}
+.restaurant-card article a {
+  color: inherit;
+  text-decoration: none;
+}
+.restaurant-card article img {
+  /*en mettant juste article tu decontiens img de l'article à la française, pas assez spécifique*/
+  width: 100%;
+  height: 166px;
+  object-fit: cover;
+}
+.restaurant-card__heading {
+  display: flex;
+  padding: 10px 13px 9px 13px;
+}
+.restaurant-card__heading h3, .restaurant-card__heading p {
+  /*attention .restaurant-card__heading h3,p va selectionner aussi tout le p du html*/
+  margin: 0 0 5px 0;
+}
+.restaurant-card__heading__opinion {
+  margin-left: auto;
+  align-self: center;
+  padding-right: 10px;
+}
+.restaurant-card__heading__opinion__icon {
+  /*est ce que tu ne pourrais pas fusionner avec ci-dessus?*/
+  display: flex;
+  /*cursor: default; tu as besoin de désactiver le lien inherit du parent pour cet élément
+  pointer-events: none;*/
+}
+.restaurant-card__heading__opinion__icon .fas {
+  position: relative;
+  /*pour ensuite definir le z-index supp à icon far qui permettra au hover d'être au dessus mais il faut un font size aussi supp pour l'instant car tu ne sais pas comment faire pour au hover sur icon fas, icon far disparaisse"*/
+  left: 21.5px;
+  opacity: 0;
+  font-size: 22px;
+  z-index: 1;
+  transition: all 500ms;
+}
+.restaurant-card__heading__opinion__icon .fas:hover {
+  /*opacity: 0;*/
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+}
+
+.restaurant-card__hover-icon:hover ~ .restaurant-card__default-icon {
+  /*le sibling ne s'applique donc que à icon .far, https://jsfiddle.net/ThinkingStiff/dWHzF/*/
+  color: transparent;
+  opacity: 0;
+  z-index: 0;
+}
+
+.restaurant-card__heading__opinion__icon .far {
+  /*est au dessus de icon .fas car déclaré en dernier dans html*/
+  position: relative;
+  /*background-color: #fff;*/
+  font-size: 22px;
+}
+
+/*.restaurant-card__heading__opinion__icon .fas:active {
+opacity: 1;
+background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+font-size: 22px;
+}*/
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    HOME-PAGE/HEADER
+\*-----------------------------------------------------------*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 76px;
+}
+.header__logo-container__logo {
+  width: 158px;
+  height: auto;
+  padding-top: 15px;
+}
+
+/*-----------------------------------------------------------*\
+    ANNEX-PAGE/HEADER
+\*-----------------------------------------------------------*/
+.header--page {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 8px 0;
+}
+.header--page__arrow-icon {
+  position: absolute;
+  color: #353535;
+  margin-right: auto;
+  top: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  left: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  right: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  bottom: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  width: 17px;
+  height: 17px;
+  margin-top: 26px;
+  padding-left: 20px;
+}
+.header--page__logo-container {
+  display: flex inline-block;
+  align-self: center;
+}
+.header--page__logo-container__logo {
+  width: 154px;
+  height: auto;
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    FOOTER
+\*-----------------------------------------------------------*/
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 25px 0 30px 0;
+}
+.footer ul {
+  list-style-type: none;
+  padding-left: 23px;
+  margin: 0;
+  /*user agent met un margin*/
+}
+.footer ul li, .footer ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.footer__logo-container {
+  padding-left: 23px;
+  margin: 0 0 21px 0;
+}
+.footer__logo-container__logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(172deg) brightness(104%) contrast(101%);
+  /*https://codepen.io/sosuke/pen/Pjoqqp*/
+  width: 95px;
+  height: auto;
+}
+
+.fas.fa-utensils, .fas.fa-handshake {
+  padding-right: 12px;
+}
+
+.fas.fa-utensils {
+  margin-right: 4px;
+}
+
+.fas.fa-handshake {
+  /*un moyen de centrer l'icone qui a subi rotate et le texte serait mieux que position relative*/
+  transform: rotate(-35deg);
+  font-size: 12px;
+  position: relative;
+  bottom: 4px;
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    OPERATION
+\*-----------------------------------------------------------*/
+.operation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 47px 0 43px 0;
+}
+.operation h2 {
+  width: 90%;
+  /*pourquoi à 100%, il sort de son caontainer*/
+  align-self: flex-start;
+  font-size: 20px;
+  padding-left: 17px;
+  margin: 0 0 23px 0;
+}
+.operation article {
+  /*rajouter padding pour que l'article soit visible sur devtool et non caché par ses contenus*/
+  display: flex;
+  width: 85.96%;
+  max-width: 344px;
+  height: 69px;
+  background-color: #f6f6f6;
+  align-items: center;
+  box-shadow: 2px 2px 12px #e8e6eb;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+.operation article:hover {
+  background-color: #f5edff;
+  /*box-shadow: 2px 2px 10px #f5edff; /*tu ne peux pas juste mettre red car il ne reprend pas les valeurs, il faut redeclarer complètement*/
+}
+.operation article:hover > .operation__icon {
+  color: #9356DC;
+}
+.operation__number {
+  font-size: 12px;
+  color: #fff;
+  background-color: #9356DC;
+  border-radius: 20px;
+  padding: 4px 8px;
+  position: relative;
+  left: -10px;
+}
+.operation__icon {
+  padding-left: 8px;
+  font-size: 18px;
+}
+.operation__icon.fa-mobile-alt {
+  font-size: 20px;
+}
+.operation__description {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8%;
+  margin-right: 20%;
+}
+
+/*----------------------------------------------------------*\
+    LOADER
+\*----------------------------------------------------------*/
+/*
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}*/
+/*html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 1.5rem;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }*/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container span {
+  margin: 1rem;
+}
+
+.load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+}
+.load__bar {
+  background-color: #15DEA5;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards infinite alternate ease-in-out;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 620ms;
+  animation-direction: alternate-reverse;
+  background: #0E397F;
+}
+.load__bar--1-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 565ms;
+  animation-direction: alternate-reverse;
+  background: #0E397F;
+}
+.load__bar--2-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 735ms;
+  animation-direction: alternate-reverse;
+  background: #0E397F;
+}
+.load__bar--3-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 1940ms;
+  animation-direction: alternate-reverse;
+  background: #0E397F;
+}
+.load__bar--4-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 1870ms;
+  animation-direction: alternate-reverse;
+  background: #0E397F;
+}
+.load__bar--5-inv:hover {
+  animation-play-state: paused;
+}
+.load__bar--6 {
+  animation-direction: alternate-reverse;
+  background: pink;
+  animation-delay: 1120ms;
+}
+.load__bar--6:hover {
+  animation-play-state: paused;
+}
+.load__bar--7 {
+  animation-direction: alternate-reverse;
+  background: pink;
+  animation-delay: 2060ms;
+}
+.load__bar--7:hover {
+  animation-play-state: paused;
+}
+.load__bar--8 {
+  animation-direction: alternate-reverse;
+  background: pink;
+  animation-delay: 660ms;
+}
+.load__bar--8:hover {
+  animation-play-state: paused;
+}
+.load__bar--9 {
+  animation-direction: alternate-reverse;
+  background: pink;
+  animation-delay: 1380ms;
+}
+.load__bar--9:hover {
+  animation-play-state: paused;
+}
+.load__bar--10 {
+  animation-direction: alternate-reverse;
+  background: pink;
+  animation-delay: 1640ms;
+}
+.load__bar--10:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/*----------------------------------------------------------*\
+    HOME PAGE/EMERGING ELEMENT
+\*----------------------------------------------------------*/
+@keyframes element-emerging {
+  0% {
+    transform: scale(0);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.header__logo-container__logo, .footer {
+  animation: element-emerging 300ms 300ms both;
+}
+
+.localisation-display, .introduction {
+  animation: element-emerging 300ms 600ms both;
+}
+
+.operation {
+  animation: element-emerging 300ms 900ms both;
+}
+
+.restaurant-card {
+  animation: element-emerging 300ms 1200ms both;
+}
+
+/*----------------------------------------------------------*\
+    ANNEX PAGE/EMERGING ELEMENT
+\*----------------------------------------------------------*/
+.entries .recipe-card__meal-kind {
+  animation: element-emerging 300ms 300ms both;
+}
+
+.entries article:nth-child(1) {
+  animation: element-emerging 500ms 600ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.entries article:nth-child(2) {
+  animation: element-emerging 500ms 750ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.entries article:nth-child(3) {
+  animation: element-emerging 500ms 900ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.entries article:nth-child(4) {
+  animation: element-emerging 500ms 1050ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.entries article:nth-child(5) {
+  animation: element-emerging 500ms 1200ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+/*----------------------------------------------------------*/
+.dishes .recipe-card__meal-kind {
+  animation: element-emerging 300ms 1350ms both;
+}
+
+.dishes article:nth-child(1) {
+  animation: element-emerging 500ms 1650ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.dishes article:nth-child(2) {
+  animation: element-emerging 500ms 1800ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.dishes article:nth-child(3) {
+  animation: element-emerging 500ms 1950ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.dishes article:nth-child(4) {
+  animation: element-emerging 500ms 2100ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+/*----------------------------------------------------------*/
+.desserts .recipe-card__meal-kind {
+  animation: element-emerging 300ms 2250ms both;
+}
+
+.desserts article:nth-child(1) {
+  animation: element-emerging 500ms 2550ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.desserts article:nth-child(2) {
+  animation: element-emerging 500ms 2700ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.desserts article:nth-child(3) {
+  animation: element-emerging 500ms 2850ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.desserts article:nth-child(4) {
+  animation: element-emerging 500ms 3000ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+.btn--command {
+  animation: element-emerging 500ms 3150ms both cubic-bezier(0.18, 0, 0, 1.12);
+}
+
+/*----------------------------------------------------------*\
+    ANNEX PAGE/HEADSHAKE
+\*----------------------------------------------------------*/
+@keyframes headshake {
+  12% {
+    /*// entièrement à droite*/
+    transform: translateX(8px);
+  }
+  37% {
+    /*// entièrement à gauche*/
+    transform: translateX(-8px);
+  }
+  62% {
+    /*// entièrement en haut*/
+    transform: translateY(8px);
+  }
+  87% {
+    /*// entièrement en bas*/
+    transform: translateY(-8px);
+  }
+}
+.header--page:hover .header--page__arrow-icon {
+  animation: headshake 150ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+  /* animation-iteration-count =2 est directement intégré dans la propriété raccourcie animation:*/
+}
+
+/*#e7e7e7*/
+@media screen and (min-width: 576px) {
+  .restaurant-intro {
+    align-items: center;
+  }
+
+  .restaurant-intro__heading, .recipe-card {
+    width: 88%;
+  }
+
+  .recipe-card {
+    align-self: center;
+  }
+
+  .header--page__arrow-icon {
+    margin-left: 7%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .localisation-display {
+    justify-content: flex-start;
+    width: 250px;
+    border-radius: 25px;
+    position: relative;
+    bottom: -20px;
+    border: solid #fff 4px;
+    margin-left: 20px;
+  }
+
+  .footer, .footer__logo-container, .footer ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .operation {
+    padding: 47px 20px 43px 20px;
+  }
+
+  .operation h2 {
+    padding-left: 0;
+  }
+
+  .operation article {
+    width: 45%;
+  }
+
+  .operation article:nth-child(2) {
+    align-self: flex-start;
+  }
+
+  .operation article:nth-child(4) {
+    align-self: flex-end;
+  }
+
+  .restaurant-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding: 54px 20px 61px 20px;
+  }
+
+  .restaurant-card h2 {
+    width: 100%;
+    padding-left: 2px;
+  }
+
+  .restaurant-card article {
+    width: 48%;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .recipe-card section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    column-gap: 24px;
+  }
+
+  .recipe-card article {
+    width: 48.5%;
+  }
+
+  .recipe-card__meal-kind {
+    margin-left: 5px;
+  }
+
+  .restaurant-card article {
+    width: 31.5%;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .localisation-display {
+    margin: auto;
+  }
+
+  .operation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .operation article {
+    width: 30%;
+  }
+
+  .operation article:nth-child(2) {
+    align-self: inherit;
+  }
+
+  .operation article:nth-child(4) {
+    align-self: inherit;
+  }
+
+  .restaurant-card article {
+    min-width: 20%;
+    max-width: 23.5%;
+  }
+
+  .recipe-card article {
+    width: 31.5%;
+  }
+}
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    HOME-PAGE/LOCALISATION
+\*-----------------------------------------------------------*/
+.localisation-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 47px;
+  box-shadow: inset 0px 3px 5px #D0D0D0;
+  position: relative;
+  /*necessaire uniquement pour l'animation pour que introduction ne passe pas au dessus...*/
+  z-index: 1000;
+}
+.localisation-display__search-input {
+  border: solid #eaeaea;
+  padding: 4px 0 0 0;
+  /*user agent met un padding qui affiche un border/background white ou #eaeaea*/
+  background-color: #eaeaea;
+  /*enlève le background blanc qui s'affiche à cause du padding ci-dessus*/
+}
+.localisation-display__search-input::placeholder {
+  color: #353535;
+  font-weight: 600;
+  background-color: #eaeaea;
+  font-size: 14px;
+}
+.localisation-display__map-marker-icon {
+  color: #353535;
+  margin: 0 17px 0 35px;
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    HOME-PAGE/INTRODUCTION
+\*-----------------------------------------------------------*/
+.introduction {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 37px 0 54px 0;
+}
+.introduction h1 {
+  font-size: 22px;
+  padding: 0 10px;
+  margin: 0 0 15px 0;
+}
+.introduction p {
+  font-size: 16px;
+  color: #353535;
+  margin: 0 0 31px 0;
+}
+
+/*#e7e7e7*/
+/*-----------------------------------------------------------*\
+    ANNEX-PAGE/RESTAURANT-INTRO
+\*-----------------------------------------------------------*/
+.restaurant-intro {
+  position: relative;
+  /*si tu l'enlèves c'est dramatique*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 288px;
+}
+.restaurant-intro img {
+  /*en mettant juste article pour le sélecteur, tu decontiens img de l'article à la française, pas assez spécifique*/
+  position: absolute;
+  /*c'est bon mais tu ne comprends pas pourquoi c'est nécessaire par rapport au z-index*/
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*clip-path: inset(0% 7% 15% 10%);*/
+}
+.restaurant-intro__heading {
+  position: relative;
+  /*c'est bon mais tu ne comprends pas pourquoi c'est nécessaire par rapport au z-index*/
+  display: flex;
+  align-items: baseline;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+  padding: 20px 18px 10px 18px;
+  z-index: 1;
+  /*bottom: -1px; /*juste pour cacher le défaut de séparation de deux div, si tu l'enlèves tu verras*/
+  /*finalement pas utile?*/
+}
+.restaurant-intro__heading h1 {
+  margin: 0px;
+  font-size: 27px;
+  font-family: shrikhand;
+  font-style: oblique 40deg;
+}
+.restaurant-intro__heading__opinion {
+  margin-left: auto;
+  align-self: center;
+  padding-right: 5px;
+}
+.restaurant-intro__heading__opinion__icon {
+  display: flex;
+}
+.restaurant-intro__heading__opinion__icon .fas {
+  position: relative;
+  /*pour ensuite definir le z-index supp à icon far qui permettra au hover d'être au dessus mais il faut un font size aussi supp pour l'instant car tu ne sais pas comment faire pour au hover sur icon fas, icon far disparaisse"*/
+  left: 21.5px;
+  opacity: 0;
+  font-size: 22px;
+  z-index: 1;
+  transition: all 500ms;
+}
+.restaurant-intro__heading__opinion__icon .fas:hover {
+  /*opacity: 0;*/
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+}
+
+.restaurant-intro__hover-icon:hover ~ .restaurant-intro__default-icon {
+  /*le sibling ne s'applique donc que à icon .far, https://jsfiddle.net/ThinkingStiff/dWHzF/*/
+  color: transparent;
+  opacity: 0;
+  z-index: 0;
+}
+
+.restaurant-intro__heading__opinion__icon .far {
+  /*est au dessus de icon .fas car déclaré en dernier dans html*/
+  position: relative;
+  /*background-color: #fff;*/
+  font-size: 22px;
+}
+
+/*
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
+
+/*# sourceMappingURL=style.css.map */
