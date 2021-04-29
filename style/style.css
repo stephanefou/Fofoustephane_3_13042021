@@ -615,7 +615,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 1280ms;
+  animation-delay: 695ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -626,7 +626,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 700ms;
+  animation-delay: 1390ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -637,7 +637,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 960ms;
+  animation-delay: 1110ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -648,7 +648,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1685ms;
+  animation-delay: 2015ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -659,7 +659,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1285ms;
+  animation-delay: 2365ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -669,7 +669,7 @@ body {
 .load__bar--6 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2000ms;
+  animation-delay: 1120ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
@@ -677,7 +677,7 @@ body {
 .load__bar--7 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1840ms;
+  animation-delay: 760ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
@@ -685,7 +685,7 @@ body {
 .load__bar--8 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1460ms;
+  animation-delay: 2360ms;
 }
 .load__bar--8:hover {
   animation-play-state: paused;
@@ -693,7 +693,7 @@ body {
 .load__bar--9 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2100ms;
+  animation-delay: 2000ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
@@ -701,7 +701,7 @@ body {
 .load__bar--10 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1680ms;
+  animation-delay: 1820ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
@@ -1069,6 +1069,7 @@ body {
   border-radius: 30px 30px 0 0;
   padding: 20px 18px 10px 18px;
   z-index: 1;
+  bottom: -1px;
   /*bottom: -1px; /*juste pour cacher le défaut de séparation de deux div, si tu l'enlèves tu verras*/
   /*finalement pas utile?*/
 }
@@ -1115,7 +1116,8 @@ body {
   /*est au dessus de icon .fas car déclaré en dernier dans html*/
   position: relative;
   /*background-color: #fff;*/
-  font-size: 22px;
+  font-size: 22.3px;
+  /*permet d'éviter un petit rognage du coeur rempli...*/
 }
 
 /*
