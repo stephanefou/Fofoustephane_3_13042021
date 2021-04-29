@@ -109,7 +109,7 @@
 .restaurant-card__heading__opinion__icon .far {/*est au dessus de icon .fas car déclaré en dernier dans html*/
     position: relative;
     /*background-color: #fff;*/
-    font-size: 22px;
+    font-size: 22.2px; /*permet d'éviter un petit rognage du coeur rempli...*/
 }
 
 

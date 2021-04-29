@@ -15,7 +15,7 @@
         border-radius: 30px;
         padding: 16px 21px;
         @include boxshadow ($box-shadow-clr);
-        transition: all 0.3s ease-in-out;
+        transition: all 100ms ease-in-out;
         &:hover {
             @include btnbackground-hover;
             @include boxshadow-hover ($box-shadow-clr--hover);

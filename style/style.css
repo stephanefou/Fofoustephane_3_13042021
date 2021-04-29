@@ -108,7 +108,7 @@ th {
   border-radius: 30px;
   padding: 16px 21px;
   box-shadow: 2px 2px 12px #e8e6eb;
-  transition: all 0.3s ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .btn__text:hover, .btn--command__text:hover {
   background: linear-gradient(#ab65fa, #f77dd4);
@@ -382,7 +382,8 @@ Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
   /*est au dessus de icon .fas car déclaré en dernier dans html*/
   position: relative;
   /*background-color: #fff;*/
-  font-size: 22px;
+  font-size: 22.2px;
+  /*permet d'éviter un petit rognage du coeur rempli...*/
 }
 
 /*.restaurant-card__heading__opinion__icon .fas:active {
@@ -580,6 +581,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  left: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  right: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  bottom: 0;
+  /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
+  margin: auto;
+  animation: loaderExit 30ms 3000ms cubic-bezier(0.4, 0.1, 0.6, 0.9) both;
 }
 .container span {
   margin: 1rem;
@@ -602,7 +615,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 620ms;
+  animation-delay: 1280ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -613,7 +626,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 565ms;
+  animation-delay: 700ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -624,7 +637,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 735ms;
+  animation-delay: 960ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -635,7 +648,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1940ms;
+  animation-delay: 1685ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -646,7 +659,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1870ms;
+  animation-delay: 1285ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -656,7 +669,7 @@ body {
 .load__bar--6 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1120ms;
+  animation-delay: 2000ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
@@ -664,7 +677,7 @@ body {
 .load__bar--7 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2060ms;
+  animation-delay: 1840ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
@@ -672,7 +685,7 @@ body {
 .load__bar--8 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 660ms;
+  animation-delay: 1460ms;
 }
 .load__bar--8:hover {
   animation-play-state: paused;
@@ -680,7 +693,7 @@ body {
 .load__bar--9 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1380ms;
+  animation-delay: 2100ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
@@ -688,7 +701,7 @@ body {
 .load__bar--10 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1640ms;
+  animation-delay: 1680ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
@@ -700,6 +713,18 @@ body {
   }
   100% {
     transform: scaleY(1);
+  }
+}
+@keyframes loaderExit {
+  0% {
+    transform: translateX(0);
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(0);
+  }
+  100% {
+    transform: translateX(9999px);
   }
 }
 /*----------------------------------------------------------*\
@@ -716,19 +741,19 @@ body {
   }
 }
 .header__logo-container__logo, .footer {
-  animation: element-emerging 300ms 300ms both;
+  animation: element-emerging 300ms 3000ms both;
 }
 
 .localisation-display, .introduction {
-  animation: element-emerging 300ms 600ms both;
+  animation: element-emerging 300ms 3300ms both;
 }
 
 .operation {
-  animation: element-emerging 300ms 900ms both;
+  animation: element-emerging 300ms 3600ms both;
 }
 
 .restaurant-card {
-  animation: element-emerging 300ms 1200ms both;
+  animation: element-emerging 300ms 3900ms both;
 }
 
 /*----------------------------------------------------------*\
