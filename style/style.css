@@ -92,9 +92,6 @@ th {
 }*/
 /*#e7e7e7*/
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    ALL PAGE/BTN
-\*-----------------------------------------------------------*/
 .btn, .btn--command {
   display: flex;
   justify-content: center;
@@ -123,9 +120,6 @@ th {
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    RECIPE-CARD
-\*-----------------------------------------------------------*/
 .recipe-card {
   display: flex;
   flex-direction: column;
@@ -259,9 +253,6 @@ Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    RESTAURANT-CARD
-\*-----------------------------------------------------------*/
 .restaurant-card {
   display: flex;
   flex-direction: column;
@@ -394,9 +385,6 @@ background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#F
 font-size: 22px;
 }*/
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    HOME-PAGE/HEADER
-\*-----------------------------------------------------------*/
 .header {
   display: flex;
   justify-content: center;
@@ -409,9 +397,6 @@ font-size: 22px;
   padding-top: 15px;
 }
 
-/*-----------------------------------------------------------*\
-    ANNEX-PAGE/HEADER
-\*-----------------------------------------------------------*/
 .header--page {
   display: flex;
   justify-content: center;
@@ -435,7 +420,7 @@ font-size: 22px;
   padding-left: 20px;
 }
 .header--page__logo-container {
-  display: flex inline-block;
+  display: inline-block;
   align-self: center;
 }
 .header--page__logo-container__logo {
@@ -444,9 +429,6 @@ font-size: 22px;
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    FOOTER
-\*-----------------------------------------------------------*/
 .footer {
   background-color: #353535;
   color: #fff;
@@ -493,9 +475,6 @@ font-size: 22px;
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    OPERATION
-\*-----------------------------------------------------------*/
 .operation {
   display: flex;
   flex-direction: column;
@@ -553,9 +532,6 @@ font-size: 22px;
   margin-right: 20%;
 }
 
-/*----------------------------------------------------------*\
-    LOADER
-\*----------------------------------------------------------*/
 /*
 *,
 *::after,
@@ -615,7 +591,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 695ms;
+  animation-delay: 740ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -626,7 +602,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 1390ms;
+  animation-delay: 1240ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -637,7 +613,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1110ms;
+  animation-delay: 2025ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -648,7 +624,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 2015ms;
+  animation-delay: 1715ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -659,7 +635,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 2365ms;
+  animation-delay: 2035ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -669,7 +645,7 @@ body {
 .load__bar--6 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1120ms;
+  animation-delay: 1280ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
@@ -677,7 +653,7 @@ body {
 .load__bar--7 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 760ms;
+  animation-delay: 440ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
@@ -685,7 +661,7 @@ body {
 .load__bar--8 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2360ms;
+  animation-delay: 2260ms;
 }
 .load__bar--8:hover {
   animation-play-state: paused;
@@ -693,7 +669,7 @@ body {
 .load__bar--9 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2000ms;
+  animation-delay: 1940ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
@@ -701,7 +677,7 @@ body {
 .load__bar--10 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1820ms;
+  animation-delay: 1660ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
@@ -727,9 +703,6 @@ body {
     transform: translateX(9999px);
   }
 }
-/*----------------------------------------------------------*\
-    HOME PAGE/EMERGING ELEMENT
-\*----------------------------------------------------------*/
 @keyframes element-emerging {
   0% {
     transform: scale(0);
@@ -756,9 +729,6 @@ body {
   animation: element-emerging 300ms 3900ms both;
 }
 
-/*----------------------------------------------------------*\
-    ANNEX PAGE/EMERGING ELEMENT
-\*----------------------------------------------------------*/
 .entries .recipe-card__meal-kind {
   animation: element-emerging 300ms 300ms both;
 }
@@ -783,7 +753,6 @@ body {
   animation: element-emerging 500ms 1200ms both cubic-bezier(0.18, 0, 0, 1.12);
 }
 
-/*----------------------------------------------------------*/
 .dishes .recipe-card__meal-kind {
   animation: element-emerging 300ms 1350ms both;
 }
@@ -804,7 +773,6 @@ body {
   animation: element-emerging 500ms 2100ms both cubic-bezier(0.18, 0, 0, 1.12);
 }
 
-/*----------------------------------------------------------*/
 .desserts .recipe-card__meal-kind {
   animation: element-emerging 300ms 2250ms both;
 }
@@ -829,9 +797,6 @@ body {
   animation: element-emerging 500ms 3150ms both cubic-bezier(0.18, 0, 0, 1.12);
 }
 
-/*----------------------------------------------------------*\
-    ANNEX PAGE/HEADSHAKE
-\*----------------------------------------------------------*/
 @keyframes headshake {
   12% {
     /*// entièrement à droite*/
@@ -882,6 +847,9 @@ body {
     bottom: -20px;
     border: solid #fff 4px;
     margin-left: 20px;
+  }
+  .localisation-display__map-marker-icon {
+    padding-right: 13px;
   }
 
   .footer, .footer__logo-container, .footer ul {
@@ -984,9 +952,6 @@ body {
   }
 }
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    HOME-PAGE/LOCALISATION
-\*-----------------------------------------------------------*/
 .localisation-display {
   display: flex;
   justify-content: center;
@@ -1005,6 +970,9 @@ body {
   background-color: #eaeaea;
   /*enlève le background blanc qui s'affiche à cause du padding ci-dessus*/
 }
+.localisation-display__search-input:focus {
+  outline: none;
+}
 .localisation-display__search-input::placeholder {
   color: #353535;
   font-weight: 600;
@@ -1017,9 +985,6 @@ body {
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    HOME-PAGE/INTRODUCTION
-\*-----------------------------------------------------------*/
 .introduction {
   background-color: #f6f6f6;
   text-align: center;
@@ -1037,9 +1002,6 @@ body {
 }
 
 /*#e7e7e7*/
-/*-----------------------------------------------------------*\
-    ANNEX-PAGE/RESTAURANT-INTRO
-\*-----------------------------------------------------------*/
 .restaurant-intro {
   position: relative;
   /*si tu l'enlèves c'est dramatique*/
@@ -1116,7 +1078,7 @@ body {
   /*est au dessus de icon .fas car déclaré en dernier dans html*/
   position: relative;
   /*background-color: #fff;*/
-  font-size: 22.3px;
+  font-size: 22.2px;
   /*permet d'éviter un petit rognage du coeur rempli...*/
 }
 

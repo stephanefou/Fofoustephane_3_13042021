@@ -1,6 +1,4 @@
-/*----------------------------------------------------------*\
-    LOADER
-\*----------------------------------------------------------*/
+
 $cd-box: rgb(231, 247, 246);
 $cd-txt: #6300a0;
 $cd-danger: #b20a37;
@@ -114,11 +112,6 @@ $cd-bars-inv: #0E397F;
         transform: translateX(9999px);
     }
 }
-
-
-/*----------------------------------------------------------*\
-    HOME PAGE/EMERGING ELEMENT
-\*----------------------------------------------------------*/
 @keyframes element-emerging{
     0% {
         transform: scale(0);
@@ -146,9 +139,6 @@ $cd-bars-inv: #0E397F;
     animation: element-emerging 300ms 3900ms both;
 }
 
-/*----------------------------------------------------------*\
-    ANNEX PAGE/EMERGING ELEMENT
-\*----------------------------------------------------------*/
 .entries .recipe-card__meal-kind  {
     animation: element-emerging 300ms 300ms both;
 }
@@ -173,7 +163,6 @@ $cd-bars-inv: #0E397F;
     animation: element-emerging 500ms 1200ms both cubic-bezier(.18,0,0,1.12);
 }
 
-/*----------------------------------------------------------*/
 
 .dishes .recipe-card__meal-kind  {
     animation: element-emerging 300ms 1350ms both;
@@ -195,7 +184,6 @@ $cd-bars-inv: #0E397F;
     animation: element-emerging 500ms 2100ms both cubic-bezier(.18,0,0,1.12);
 }
 
-/*----------------------------------------------------------*/
 
 .desserts .recipe-card__meal-kind  {
     animation: element-emerging 300ms 2250ms both;
@@ -221,9 +209,6 @@ $cd-bars-inv: #0E397F;
     animation: element-emerging 500ms 3150ms both cubic-bezier(.18,0,0,1.12);
 }
 
-/*----------------------------------------------------------*\
-    ANNEX PAGE/HEADSHAKE
-\*----------------------------------------------------------*/
 @keyframes headshake {
     12% {
         /*// entièrement à droite*/

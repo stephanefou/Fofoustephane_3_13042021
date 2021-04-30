@@ -1,8 +1,5 @@
 @import "../utils/_variables.scss";
 
-/*-----------------------------------------------------------*\
-    HOME-PAGE/LOCALISATION
-\*-----------------------------------------------------------*/
 .localisation-display {
     display: flex;
     justify-content: center;
@@ -16,6 +13,9 @@
         border: solid #eaeaea;
         padding: 4px 0 0 0 ; /*user agent met un padding qui affiche un border/background white ou #eaeaea*/
         background-color: #eaeaea; /*enlève le background blanc qui s'affiche à cause du padding ci-dessus*/
+        &:focus {
+            outline: none;
+        }
         &::placeholder {
             color: $bg-clr-footer;
             font-weight: 600;

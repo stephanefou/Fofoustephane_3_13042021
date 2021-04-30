@@ -27,6 +27,9 @@
         bottom: -20px;
         border: solid $clr-white 4px;
         margin-left: 20px;
+        &__map-marker-icon {
+            padding-right: 13px;
+        }
     }
 
     .footer, .footer__logo-container, .footer ul {
