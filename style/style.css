@@ -591,7 +591,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 740ms;
+  animation-delay: 1265ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -602,7 +602,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 1240ms;
+  animation-delay: 850ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -613,7 +613,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 2025ms;
+  animation-delay: 1605ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -624,7 +624,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1715ms;
+  animation-delay: 1415ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -635,7 +635,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 2035ms;
+  animation-delay: 1795ms;
   animation-direction: alternate-reverse;
   background: #0E397F;
 }
@@ -645,7 +645,7 @@ body {
 .load__bar--6 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1280ms;
+  animation-delay: 1060ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
@@ -653,7 +653,7 @@ body {
 .load__bar--7 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 440ms;
+  animation-delay: 2160ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
@@ -661,7 +661,7 @@ body {
 .load__bar--8 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 2260ms;
+  animation-delay: 840ms;
 }
 .load__bar--8:hover {
   animation-play-state: paused;
@@ -669,7 +669,7 @@ body {
 .load__bar--9 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1940ms;
+  animation-delay: 1220ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
@@ -677,7 +677,7 @@ body {
 .load__bar--10 {
   animation-direction: alternate-reverse;
   background: pink;
-  animation-delay: 1660ms;
+  animation-delay: 1760ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
@@ -981,7 +981,7 @@ body {
 }
 .localisation-display__map-marker-icon {
   color: #353535;
-  margin: 0 17px 0 35px;
+  margin: 0 17px 0 25px;
 }
 
 /*#e7e7e7*/
