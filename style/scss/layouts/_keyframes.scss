@@ -1,4 +1,4 @@
-
+@import "../utils/_variables.scss";
 $cd-box: rgb(231, 247, 246);
 $cd-txt: #6300a0;
 $cd-danger: #b20a37;
@@ -58,7 +58,7 @@ $cd-bars-inv: #0E397F;
     margin-bottom: 0;
     
     &__bar {
-        background-color: #15DEA5;
+        background-color: $clr-primary;
         height: 100%;
         width: $size;
         animation: bars $anim-dur backwards infinite alternate ease-in-out;
@@ -70,7 +70,7 @@ $cd-bars-inv: #0E397F;
                 animation-delay: $anim-delay * $i + random(100)*15ms;
                 animation-direction: alternate-reverse;
                 // animation-fill-mode: forwards;
-                background: $cd-bars-inv;
+                background: $clr-secondary;
                 &:hover {
                     animation-play-state: paused;
                 }
@@ -79,7 +79,7 @@ $cd-bars-inv: #0E397F;
         @for $i from 1 through 5 {
             &--#{$i + 5} {
                 animation-direction: alternate-reverse;
-                background: pink;
+                background: $clr-secondary;
                 animation-delay: $anim-delay * $i + (random(100)*20ms);
                 
                 &:hover {
