@@ -186,10 +186,7 @@ th {
   /*ne va pas sans les 2 propriétés précédentes*/
 }
 .recipe-card__recipe--byline {
-<<<<<<< HEAD
   width: 100%;
-=======
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
   font-size: 16px;
   margin: 0;
   white-space: nowrap;
@@ -197,10 +194,7 @@ th {
   text-overflow: ellipsis;
   /*ne va pas sans les 2 propriétés précédentes*/
   transition: width 400ms;
-<<<<<<< HEAD
   /*le width initial de 100% est important sinon le timing de la transition ne fonctionnera pas*/
-=======
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
 }
 .recipe-card__recipe--price {
   font-weight: 900;
@@ -248,11 +242,7 @@ th {
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
 .recipe-card article:hover .recipe-card__recipe--byline {
-<<<<<<< HEAD
   width: 85%;
-=======
-  width: 90%;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
 }
 
 .recipe-card article:hover > .recipe-card__animate {
@@ -607,11 +597,7 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-<<<<<<< HEAD
-  animation-delay: 410ms;
-=======
-  animation-delay: 1085ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 425ms;
   animation-direction: alternate-reverse;
   background: #FF79DA;
 }
@@ -622,11 +608,7 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-<<<<<<< HEAD
-  animation-delay: 1810ms;
-=======
-  animation-delay: 415ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 1795ms;
   animation-direction: alternate-reverse;
   background: #FF79DA;
 }
@@ -637,11 +619,7 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-<<<<<<< HEAD
-  animation-delay: 900ms;
-=======
-  animation-delay: 1635ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 930ms;
   animation-direction: alternate-reverse;
   background: #FF79DA;
 }
@@ -652,11 +630,7 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-<<<<<<< HEAD
-  animation-delay: 1340ms;
-=======
-  animation-delay: 905ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 1925ms;
   animation-direction: alternate-reverse;
   background: #FF79DA;
 }
@@ -667,11 +641,7 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-<<<<<<< HEAD
-  animation-delay: 2125ms;
-=======
-  animation-delay: 2185ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 1045ms;
   animation-direction: alternate-reverse;
   background: #FF79DA;
 }
@@ -681,11 +651,7 @@ body {
 .load__bar--6 {
   animation-direction: alternate-reverse;
   background: #FF79DA;
-<<<<<<< HEAD
-  animation-delay: 1620ms;
-=======
-  animation-delay: 1580ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 1740ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
@@ -693,11 +659,7 @@ body {
 .load__bar--7 {
   animation-direction: alternate-reverse;
   background: #FF79DA;
-<<<<<<< HEAD
-  animation-delay: 1080ms;
-=======
-  animation-delay: 2300ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 1900ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
@@ -713,11 +675,7 @@ body {
 .load__bar--9 {
   animation-direction: alternate-reverse;
   background: #FF79DA;
-<<<<<<< HEAD
-  animation-delay: 1560ms;
-=======
-  animation-delay: 920ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 2140ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
@@ -725,11 +683,7 @@ body {
 .load__bar--10 {
   animation-direction: alternate-reverse;
   background: #FF79DA;
-<<<<<<< HEAD
-  animation-delay: 2520ms;
-=======
-  animation-delay: 1340ms;
->>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
+  animation-delay: 2340ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
