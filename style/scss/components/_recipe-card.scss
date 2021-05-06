@@ -57,13 +57,20 @@
             text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
         }
         &--byline {
+<<<<<<< HEAD
             width: 100%;
+=======
+>>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
             font-size: 16px;
             margin: 0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
+<<<<<<< HEAD
             transition: width 400ms; /*le width initial de 100% est important sinon le timing de la transition ne fonctionnera pas*/
+=======
+            transition: width 400ms;
+>>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
         }
         &--price {
             font-weight: 900;
@@ -107,7 +114,11 @@
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
 .recipe-card article:hover .recipe-card__recipe--byline {
+<<<<<<< HEAD
     width: 85%;
+=======
+    width: 90%;
+>>>>>>> 9139653c52cd0021b6a9138b2c58ef059fd97c83
 }
 
 .recipe-card article:hover>.recipe-card__animate {
