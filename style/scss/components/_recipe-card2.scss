@@ -42,11 +42,11 @@
         margin-left: 20px;
     }
     &__recipe {
-        width: 100%;
+        width: 80%;
         margin: 0;
         padding: 0 0 0 9px;
-        overflow: hidden; /*empêche le rognage à gauche pour le text-overflow ci dessous*/
-        
+        overflow: inherit; /*empêche le rognage à gauche pour le text-overflow ci dessous*/
+        transition: width 400ms ease-in-out;
         h3 {
             margin: 0 0 2px 0;
             font-size: 18px;
@@ -56,17 +56,21 @@
             overflow: hidden;
             text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
         }
+        &--bylines {
+            display: flex;
+        }
         &--byline {
             font-size: 16px;
             margin: 0;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes*/
-            transition: width 400ms;
+            text-overflow: ellipsis; /*ne va pas sans les 2 propriétés précédentes et ne marchait pas car tu avais mis display flex et space between quand le prix y figurait aussi*/
+            z-index: 9999;
         }
         &--price {
             font-weight: 900;
             font-size: 16px;
+            background-color: $clr-white;
             white-space: nowrap;
             transform: translateX(47px);
             transition: transform 400ms ease-in-out;
@@ -76,7 +80,7 @@
             right: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
             bottom: 0; /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
             width: 25px;
-            margin: 37px 69px 0px auto; /*47 du translate + 22 du margin right normal*/
+            margin: 37px 69px 20px auto; /*47 du translate + 22 du margin right normal*/
         }
     }
     &__animate {
@@ -105,8 +109,8 @@
 /*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
-.recipe-card article:hover .recipe-card__recipe--byline {
-    width: 90%;
+.recipe-card article:hover .recipe-card__recipe {
+    width: 60%;
 }
 
 .recipe-card article:hover>.recipe-card__animate {

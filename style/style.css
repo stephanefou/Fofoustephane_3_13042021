@@ -126,6 +126,12 @@ th {
   justify-content: center;
   justify-self: center;
   background-color: #f6f6f6;
+  /*article:hover>&__animate {
+      transform: translateX(-56px);
+  }
+  article:hover .fa-check-circle {
+      transform: rotate(0turn);
+  }*/
 }
 .recipe-card section {
   display: flex;
@@ -135,7 +141,7 @@ th {
 }
 .recipe-card article {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   width: 92.98%;
   height: 65px;
   border-radius: 15px;
@@ -144,12 +150,6 @@ th {
   overflow: hidden;
   /*pour rogner le square*/
   margin-bottom: 27px;
-}
-article:hover > .recipe-card__animate {
-  transform: translateX(-56px);
-}
-.recipe-card article:hover .fa-check-circle {
-  transform: rotate(0turn);
 }
 .recipe-card__meal-kind {
   align-self: start;
@@ -186,14 +186,13 @@ article:hover > .recipe-card__animate {
   /*ne va pas sans les 2 propriétés précédentes*/
 }
 .recipe-card__recipe--byline {
-  display: flex;
-  justify-content: space-between;
   font-size: 16px;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   /*ne va pas sans les 2 propriétés précédentes*/
+  transition: width 400ms;
 }
 .recipe-card__recipe--price {
   font-weight: 900;
@@ -211,7 +210,7 @@ article:hover > .recipe-card__animate {
   bottom: 0;
   /*important car avec ses 4 lignes reprends taille parent et comportement, il faut ensuite donner un width et height à l'élément --newest pour lui appliquer enfin un margin-left auto qui fonctionne!!!!*/
   width: 25px;
-  margin: 37px 69px 0 auto;
+  margin: 37px 69px 0px auto;
   /*47 du translate + 22 du margin right normal*/
 }
 .recipe-card__animate {
@@ -240,6 +239,10 @@ article:hover > .recipe-card__animate {
 /*Ta bordure est contenue dans une balise, cette balise ne doit pas contenir de padding ni margin sur droite et gauche. Si tu as utilisé display flex, tu peux utiliser flex-basis
 Par exemple en supposant que activité est hébergement sont dans une ul li li, tu donnes flex basis 100% à la ul , et flex-basis 50% à chaque li.
 Flex-basis c’est un peu pour les box ce que le line-height est au texte*/
+.recipe-card article:hover .recipe-card__recipe--byline {
+  width: 90%;
+}
+
 .recipe-card article:hover > .recipe-card__animate {
   transform: translateX(0);
 }
@@ -532,6 +535,7 @@ font-size: 22px;
   margin-right: 20%;
 }
 
+/*#e7e7e7*/
 /*
 *,
 *::after,
@@ -582,7 +586,7 @@ body {
   margin-bottom: 0;
 }
 .load__bar {
-  background-color: #15DEA5;
+  background-color: #9356DC;
   height: 100%;
   width: 3vh;
   animation: bars 1000ms backwards infinite alternate ease-in-out;
@@ -591,9 +595,9 @@ body {
   animation-delay: 200ms;
 }
 .load__bar--1-inv {
-  animation-delay: 1265ms;
+  animation-delay: 1085ms;
   animation-direction: alternate-reverse;
-  background: #0E397F;
+  background: #FF79DA;
 }
 .load__bar--1-inv:hover {
   animation-play-state: paused;
@@ -602,9 +606,9 @@ body {
   animation-delay: 400ms;
 }
 .load__bar--2-inv {
-  animation-delay: 850ms;
+  animation-delay: 415ms;
   animation-direction: alternate-reverse;
-  background: #0E397F;
+  background: #FF79DA;
 }
 .load__bar--2-inv:hover {
   animation-play-state: paused;
@@ -613,9 +617,9 @@ body {
   animation-delay: 600ms;
 }
 .load__bar--3-inv {
-  animation-delay: 1605ms;
+  animation-delay: 1635ms;
   animation-direction: alternate-reverse;
-  background: #0E397F;
+  background: #FF79DA;
 }
 .load__bar--3-inv:hover {
   animation-play-state: paused;
@@ -624,9 +628,9 @@ body {
   animation-delay: 800ms;
 }
 .load__bar--4-inv {
-  animation-delay: 1415ms;
+  animation-delay: 905ms;
   animation-direction: alternate-reverse;
-  background: #0E397F;
+  background: #FF79DA;
 }
 .load__bar--4-inv:hover {
   animation-play-state: paused;
@@ -635,49 +639,49 @@ body {
   animation-delay: 1000ms;
 }
 .load__bar--5-inv {
-  animation-delay: 1795ms;
+  animation-delay: 2185ms;
   animation-direction: alternate-reverse;
-  background: #0E397F;
+  background: #FF79DA;
 }
 .load__bar--5-inv:hover {
   animation-play-state: paused;
 }
 .load__bar--6 {
   animation-direction: alternate-reverse;
-  background: pink;
-  animation-delay: 1060ms;
+  background: #FF79DA;
+  animation-delay: 1580ms;
 }
 .load__bar--6:hover {
   animation-play-state: paused;
 }
 .load__bar--7 {
   animation-direction: alternate-reverse;
-  background: pink;
-  animation-delay: 2160ms;
+  background: #FF79DA;
+  animation-delay: 2300ms;
 }
 .load__bar--7:hover {
   animation-play-state: paused;
 }
 .load__bar--8 {
   animation-direction: alternate-reverse;
-  background: pink;
-  animation-delay: 840ms;
+  background: #FF79DA;
+  animation-delay: 1300ms;
 }
 .load__bar--8:hover {
   animation-play-state: paused;
 }
 .load__bar--9 {
   animation-direction: alternate-reverse;
-  background: pink;
-  animation-delay: 1220ms;
+  background: #FF79DA;
+  animation-delay: 920ms;
 }
 .load__bar--9:hover {
   animation-play-state: paused;
 }
 .load__bar--10 {
   animation-direction: alternate-reverse;
-  background: pink;
-  animation-delay: 1760ms;
+  background: #FF79DA;
+  animation-delay: 1340ms;
 }
 .load__bar--10:hover {
   animation-play-state: paused;
